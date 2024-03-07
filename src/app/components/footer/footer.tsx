@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import FooterLogo from "../../../../public/images/footer-logo.png";
+import FooterLogo from "../../../../public/images/footer-logo.svg";
 import GraubnerLogo from "../../../../public/images/graubner-logo.svg";
 import SchenkLogo from "../../../../public/images/schenk-logo.svg";
 

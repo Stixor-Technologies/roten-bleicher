@@ -22,6 +22,7 @@ const config: Config = {
         "light-purple": "#BAB2FF",
         "medium-purple": "#9288E6",
         red: "#A02710",
+        "smoke-red": "#8E210D",
       },
       fontFamily: {
         area: ["var(--font-area)"],

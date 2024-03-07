@@ -56,8 +56,12 @@ export default function RootLayout({
       <body
         className={`${areaThin?.variable} ${areaLight?.variable} ${areaRegular?.variable} ${areaMedium?.variable} ${areaSemiBold?.variable} ${areaBold?.variable} ${areaExtraBold.variable} font-area`}
       >
-        {children}
-        <Footer />
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            {children}
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );
