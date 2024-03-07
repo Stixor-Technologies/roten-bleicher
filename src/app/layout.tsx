@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "./components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +57,7 @@ export default function RootLayout({
         className={`${areaThin?.variable} ${areaLight?.variable} ${areaRegular?.variable} ${areaMedium?.variable} ${areaSemiBold?.variable} ${areaBold?.variable} ${areaExtraBold.variable} font-area`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
