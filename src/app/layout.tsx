@@ -1,8 +1,44 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const areaThin = localFont({
+  src: "./fonts/Area-Thin.otf",
+  variable: "--font-area-thin",
+});
+
+const areaLight = localFont({
+  src: "./fonts/Area-Light.otf",
+  variable: "--font-area-light",
+});
+
+const areaRegular = localFont({
+  src: "./fonts/Area-Regular.otf",
+  variable: "--font-area",
+});
+
+const areaMedium = localFont({
+  src: "./fonts/Area-Medium.otf",
+  variable: "--font-area-medium",
+});
+
+const areaSemiBold = localFont({
+  src: "./fonts/Area-Semibold.otf",
+  variable: "--font-area-semibold",
+});
+
+const areaBold = localFont({
+  src: "./fonts/Area-Bold.otf",
+  variable: "--font-area-bold",
+});
+
+const areaExtraBold = localFont({
+  src: "./fonts/Area-Extrabold.otf",
+  variable: "--font-area-extrabold",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +52,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${areaThin?.variable} ${areaLight?.variable} ${areaRegular?.variable} ${areaMedium?.variable} ${areaSemiBold?.variable} ${areaBold?.variable} ${areaExtraBold.variable} font-area`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

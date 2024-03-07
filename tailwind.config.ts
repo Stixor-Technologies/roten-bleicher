@@ -13,6 +13,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "light-purple": "#BAB2FF",
+        "medium-purple": "#9288E6",
+        red: "#A02710",
+      },
+      fontFamily: {
+        area: ["var(--font-area)"],
+        "area-thin": ["var(--font-area-thin)"],
+        "area-light": ["var(--font-area-light)"],
+        "area-medium": ["var(--font-area-medium)"],
+        "area-semibold": ["var(--font-area-semibold)"],
+        "area-bold": ["var(--font-area-bold)"],
+        "area-extrabold": ["var(--font-area-extrabold)"],
+      },
     },
   },
   plugins: [],
