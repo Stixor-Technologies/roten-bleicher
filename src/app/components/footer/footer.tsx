@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import FooterLogo from "../../../../public/images/footer-logo.svg";
-import GraubnerLogo from "../../../../public/images/graubner-logo.svg";
-import SchenkLogo from "../../../../public/images/schenk-logo.svg";
+import FooterLogo from "../../../../public/images/footer/footer-logo.svg";
+import GraubnerLogo from "../../../../public/images/footer/graubner-logo.svg";
+import SchenkLogo from "../../../../public/images/footer/schenk-logo.svg";
 
 const Footer = () => {
   return (

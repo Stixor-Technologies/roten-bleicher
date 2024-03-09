@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -8,14 +8,15 @@ import BannerLogo from "../../../../public/images/banner/banner-logo.svg";
 import Erkenbar from "../../../../public/images/banner/erkennbar.svg";
 import Effizient from "../../../../public/images/banner/effizient.svg";
 import Einheimisch from "../../../../public/images/banner/einheimisch.svg";
+import Header from "../header/header";
 
 const Banner = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const b2Images = [Erkenbar, Effizient, Einheimisch];
 
-  const overLappingPanel = useRef<HTMLElement>(null);
-  const sliderContainer = useRef<HTMLElement>(null);
+  const overLappingPanel = useRef<HTMLElement | null>(null);
+  const sliderContainer = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
     ScrollTrigger.create({
@@ -136,7 +137,7 @@ const Banner = () => {
         ref={overLappingPanel}
         className="panel h-screen bg-smoke-red relative flex items-center justify-center overflow-hidden"
       >
-        <div className="flex flex-col max-w-[46rem] px-[2rem] md:px-0">
+        <div className="flex flex-col max-w-[46rem] px-[1rem] sm:px-[2rem] md:px-0">
           <Image
             src={BannerLogo}
             width={200}
@@ -150,28 +151,32 @@ const Banner = () => {
           </h2>
         </div>
       </section>
-      <section
-        ref={sliderContainer}
-        className="h-screen bg-light-purple relative flex items-center justify-center px-[2rem]"
-      >
-        <div className="max-w-[650px] w-full h-[210px] md:px-0 relative">
-          {b2Images.map((image, index) => (
-            <div
-              key={index}
-              className={`slide h-full w-full absolute  flex ${
-                index === 0 && "active"
-              } ${index !== 0 && "opacity-0"}`}
-            >
-              <Image
-                src={image}
-                fill
-                alt={`banner-slider-image-${index}`}
-                className="w-full"
-                priority
-              />
-            </div>
-          ))}
+
+      <section className="relative">
+        <div
+          ref={sliderContainer}
+          className="h-screen bg-light-purple relative top-0 left-0 w-full flex items-center justify-center px-[1rem] sm:px-[2rem] z-20"
+        >
+          <div className="max-w-[650px] w-full h-[210px] md:px-0 relative">
+            {b2Images.map((image, index) => (
+              <div
+                key={index}
+                className={`slide h-full w-full absolute flex ${
+                  index === 0 && "active"
+                } ${index !== 0 && "opacity-0"}`}
+              >
+                <Image
+                  src={image}
+                  fill
+                  alt={`banner-slider-image-${index}`}
+                  className="w-full"
+                  priority
+                />
+              </div>
+            ))}
+          </div>
         </div>
+        <Header />
       </section>
     </>
   );
