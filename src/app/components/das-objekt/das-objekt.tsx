@@ -44,7 +44,8 @@ const DasObjekt = () => {
                   src={imageSrc}
                   width={1536}
                   height={900}
-                  alt="philosophy-landing"
+                  alt=""
+                  priority
                 />
               </div>
             </SwiperSlide>
