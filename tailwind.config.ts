@@ -9,7 +9,10 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+      },
     },
 
     extend: {
@@ -20,9 +23,11 @@ const config: Config = {
       },
       colors: {
         "light-purple": "#BAB2FF",
-        "medium-purple": "#9288E6",
+        "medium-purple": "#A69DF0",
+        "dark-purple": "#9288E6",
         red: "#A02710",
         "smoke-red": "#8E210D",
+        "light-gray": "#EAEAEA",
       },
       fontFamily: {
         area: ["var(--font-area)"],
