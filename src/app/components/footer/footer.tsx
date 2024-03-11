@@ -64,7 +64,7 @@ const Footer = () => {
             <Link
               href={"#"}
               target="_blank"
-              className="relative after:absolute after:-bottom-1 after:left-0 after:h-[0.1rem] after:w-0 after:bg-red after:transition-width after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full"
+              className="relative hover:text-red transition-all duration-500 ease-in-out"
             >
               Impressum
             </Link>
