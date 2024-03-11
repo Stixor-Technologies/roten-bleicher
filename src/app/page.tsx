@@ -3,7 +3,6 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import Banner from "./components/banner/banner";
-import DieLage from "./components/die-lage/die-lage";
 import FAQ from "./components/grundrisse/grundrisse";
 
 export default function Home() {
