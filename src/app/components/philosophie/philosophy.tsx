@@ -31,14 +31,14 @@ const Philosophy = () => {
   });
 
   return (
-    <section className="container py-[10vw]">
+    <section className="container py-[9.23vw]">
       <div className="flex relative">
         <Image
           src={PhilosophyLanding}
           width={900}
           height={200}
           alt="philosophy-landing"
-          className="w-full mb-[12vw]"
+          className="w-full mb-[13.3vw]"
         />
       </div>
 
