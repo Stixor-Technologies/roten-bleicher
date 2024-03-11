@@ -3,6 +3,8 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import Banner from "./components/banner/banner";
+import Philosophy from "./components/philosophie/philosophy";
+
 import FAQ from "./components/grundrisse/grundrisse";
 
 export default function Home() {
@@ -17,6 +19,7 @@ export default function Home() {
   return (
     <main className="">
       <Banner />
+      <Philosophy />
       <FAQ />
     </main>
   );
