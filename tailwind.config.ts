@@ -8,14 +8,26 @@ const config: Config = {
   ],
   theme: {
     container: {
+      // screens: {
+      //   sm: "100%",
+      //   // md: "100%",
+      //   // lg: "100%",
+      //   // xl: "100%",
+      // },
+
       center: true,
       padding: {
         DEFAULT: "1rem",
         sm: "2rem",
+        md: "4rem",
+        "3xl": "8.8rem",
       },
     },
 
     extend: {
+      screens: {
+        "3xl": "1920px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -30,6 +42,7 @@ const config: Config = {
         "light-gray": "#EAEAEA",
       },
       fontFamily: {
+        "gibson-medium": ["var(--font-gibson-medium)"],
         area: ["var(--font-area)"],
         "area-thin": ["var(--font-area-thin)"],
         "area-light": ["var(--font-area-light)"],
