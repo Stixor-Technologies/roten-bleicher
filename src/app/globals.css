@@ -5,6 +5,10 @@
 @layer utilities {
 }
 
+.container {
+  /* @apply max-w-full xl:w-[85%] mx-auto sm:px-[2rem] md:px-[3rem] xl:px-[0rem]; */
+}
+
 .swiper-pagination {
   position: initial !important;
   padding: 0px 2.5rem;
