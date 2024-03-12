@@ -22,7 +22,7 @@ const Philosophy = () => {
       color: "#EAEAEA",
       scrollTrigger: {
         trigger: fadedTextContainer.current,
-        start: "top 60%",
+        start: "top 80%",
         end: "bottom 40%",
         scrub: 1,
         // pin: true,
@@ -42,7 +42,7 @@ const Philosophy = () => {
         />
       </div>
 
-      <div ref={fadedTextContainer} className="xl:w-[85%] mx-auto">
+      <div ref={fadedTextContainer} className="xl:w-[83.3%] mx-auto">
         <h3 className="font-area-bold mb-6 md:text-xl">Philosophie</h3>
 
         <p

@@ -53,7 +53,7 @@ const DasObjekt = () => {
         </Swiper>
       </div>
 
-      <div className="xl:w-[85%] mx-auto px-[1rem] sm:px-[2rem] xl:px-0">
+      <div className="container">
         <h3 className="text-xl font-area-bold mb-2 lg:mb-0">Das Objekt</h3>
 
         <h4 className="text-[clamp(2rem,5vw,5rem)] text-medium-purple">

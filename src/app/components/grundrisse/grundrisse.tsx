@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import FooterLogo from "../../../../public/images/footer/footer-logo.svg";
+import PropertyStructure from "../../../../public/images/property-structure.svg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import PlusIcon from "../../../../public/images/icons/plus-icon.svg";
 import CrossIcon from "../../../../public/images/icons/cross-red.svg";
+import Link from "next/link";
+import ArrowRed from "../../../../public/images/icons/arrow-red.svg";
 
 type FaqITemType = {
   question: string;
@@ -103,8 +105,8 @@ const FaqItem = ({
     if (!isActive) {
       gsap.to(answerRef.current, {
         height: "auto",
-        marginTop: "40px",
-        marginBottom: "20px",
+        marginTop: "63px",
+        marginBottom: "30px",
         duration: 0.4,
       });
       answerRef.current?.classList.add("active");
@@ -153,70 +155,64 @@ const FaqItem = ({
   });
 
   return (
-    <div className={` border-t-white border-t-[1px] py-3`}>
+    <div className={` border-b-[1px] border-b-white py-4`}>
       <div
-        className="group flex items-center gap-4 relative cursor-pointer"
+        className="group flex items-center gap-8 relative cursor-pointer"
         onClick={questionClicked}
       >
         <span
-          className={`text-[clamp(2rem,5vw,4.375rem)] text-dark-purple inline-block md:max-w-[40vw] w-full group-hover:text-red transition-all ease-in-out duration-300`}
+          className={`text-[2rem] md:text-[4.375rem] flex-1 md:flex-initial max-w-[34.688rem] w-full text-dark-purple inline-block group-hover:text-red transition-all ease-in-out duration-300 ${
+            isActive && "text-red"
+          }`}
         >
           {faqItem?.question}
         </span>
 
-        <div className="flex-1 flex justify-between relative">
+        <div className="md:flex-1 flex justify-between relative">
           {!isActive && (
             <Image
               src={PlusIcon}
-              width={25}
-              height={25}
+              width={44}
+              height={44}
               alt="expand-answer-icon"
-              className="opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+              className="opacity-100 group-hover:opacity-100 transition-all ease-in-out duration-300 w-[2rem] md:w-auto"
             />
           )}
 
           {isActive && (
             <Image
               src={CrossIcon}
-              width={25}
-              height={25}
+              width={30}
+              height={30}
               alt="expand-answer-icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-[2rem] lg:w-auto max-w-[2.5rem]"
             />
           )}
         </div>
-
-        {/* {!isActive ? (
-          <Image
-            src={!isActive ? PlusIcon : CrossIcon}
-            width={25}
-            height={25}
-            alt="expand-answer-icon"
-            className="opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
-          />
-        ) : (
-          <Image
-            src={CrossIcon}
-            width={20}
-            height={20}
-            alt="close-answer-icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2"
-          />
-        )} */}
-
-        <div></div>
       </div>
 
       <div
         ref={answerRef}
-        className="flex flex-col h-0 overflow-hidden gap-9 lg:gap-14 lg:flex-row"
+        className="flex flex-col h-0 overflow-hidden gap-9 2xl:gap-[8.25rem] xl:flex-row"
       >
-        <div className="flex-1 md:text-xl">
-          <span className="text-white font-area-thin">{faqItem.answer}</span>
+        <div className="flex-1 md:text-xl md:-mb-2 max-w-[42.125rem]">
+          <span className="text-white font-area-thin inline-block">
+            {faqItem.answer}
+          </span>
+          <Link
+            href="#"
+            className="group mt-7.5 inline-flex items-center gap-4 self-center mt-6 md:mt-[2.875rem]"
+          >
+            <Image src={ArrowRed} width={41} height={36} alt="" />
+
+            <span className="font-area-bold md:text-xl tranition-all duration-300 text-red group-hover:pl-2 ">
+              GRUNDRISS RUNTERLADEN
+            </span>
+          </Link>
         </div>
 
-        <div className="flex-1 flex flex-col gap-9 lg:gap-14 sm:flex-row">
-          <div className="space-y-2 flex-1 lg:flex-initial">
+        <div className="flex-1 flex flex-col gap-9 2xl:gap-[8.25rem] sm:flex-row">
+          <div className="flex-1 lg:flex-initial flex flex-col justify-between gap-4 xl:gap-0 font-area-bold">
             <div className="flex flex-col md:text-[1.438rem]">
               <span className="text-white">Etage</span>
               <span className="text-red">{faqItem.floor}</span>
@@ -233,12 +229,13 @@ const FaqItem = ({
             </div>
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 sm:self-end">
             <Image
-              src={FooterLogo}
-              width={330}
-              height={200}
-              alt="footer-logo"
+              src={PropertyStructure}
+              width={170}
+              height={100}
+              alt=""
+              className="w-full md:max-h-[220px]"
             />
           </div>
         </div>
@@ -255,8 +252,8 @@ const FAQ = () => {
   };
 
   return (
-    <section className="bg-light-purple">
-      <div className="container py-[8vw]">
+    <section className="bg-light-purple mt-9">
+      <div className="container py-[7.82vw]">
         <div className="flex flex-col justify-between lg:flex-row">
           <h3 className="font-area-bold mb-6 md:text-xl w-[35%]">Grundrisse</h3>
 
@@ -270,7 +267,7 @@ const FAQ = () => {
         </div>
 
         {/* faqs */}
-        <div className="mt-10 md:mt-20 border-b-white border-t-[1px]">
+        <div className="mt-10 md:mt-[5.188rem] border-b-white border-t-[1px]">
           {faq.map((faqItem, index) => (
             <FaqItem
               id={index}
