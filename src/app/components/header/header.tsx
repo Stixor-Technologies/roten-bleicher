@@ -28,12 +28,12 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`absolute max-h-[78px] bottom-0 w-full py-5 ease-in-out bg-white md:py-5 z-10`}
+      className={`absolute  bottom-0 w-full  ease-in-out bg-white  z-10`}
     >
-      <div className="container flex items-center justify-between">
-        <ul className="hidden md:flex gap-4 lg:gap-5 text-[0.813rem] lg:text-base">
+      <div className="container flex items-center justify-between py-5 max-h-[7.063rem] md:py-11">
+        <ul className="hidden md:flex gap-4 lg:gap-5 xl:gap-10 text-[0.813rem] lg:text-base">
           {menuLinks.map((item, index) => (
-            <li className="text-smoke-red font-area-bold" key={index}>
+            <li className="text-red font-area-semibold xl:text-xl" key={index}>
               {item.name}
             </li>
           ))}
@@ -45,9 +45,10 @@ const Header = () => {
           <Link href={"#"}>
             <Image
               src={HeaderLogo}
-              width={130}
+              width={200}
               height={100}
               alt="roten-bleicher"
+              className="w-32 lg:w-auto max-w-[200px]"
             />
           </Link>
         </div>
