@@ -3,6 +3,11 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/footer/footer";
 
+const gibsonMedium = localFont({
+  src: "./fonts/Gibson-Medium.otf",
+  variable: "--font-gibson-medium",
+});
+
 const areaThin = localFont({
   src: "./fonts/Area-Thin.otf",
   variable: "--font-area-thin",
@@ -51,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${areaThin?.variable} ${areaLight?.variable} ${areaRegular?.variable} ${areaMedium?.variable} ${areaSemiBold?.variable} ${areaBold?.variable} ${areaExtraBold.variable} font-area`}
+        className={`${areaThin?.variable} ${areaLight?.variable} ${areaRegular?.variable} ${areaMedium?.variable} ${areaSemiBold?.variable} ${areaBold?.variable} ${areaExtraBold.variable} ${gibsonMedium.variable} font-area`}
       >
         <div id="smooth-wrapper">
           <div id="smooth-content">

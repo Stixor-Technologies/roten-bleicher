@@ -53,7 +53,6 @@ const Banner = () => {
           ".slide.active",
         ) as HTMLDivElement;
         const sectionToIndex = slides.indexOf(slideFrom);
-        console.log(sectionToIndex);
         if (sectionToIndex !== slides.length - 1) {
           const slideTo = slides[sectionToIndex + 1];
           moveToSlide(slideFrom, slideTo);
@@ -79,9 +78,6 @@ const Banner = () => {
             ease: "power4.inOut",
             clearProps: "all",
             className: "slide h-full w-full absolute opacity-1 flex opacity-0",
-            // className:
-            //   "slide max-w-[650px] w-full h-[210px] absolute opacity-1 flex opacity-0",
-            // duration: 1,
           })
           .to(
             slideTo,
