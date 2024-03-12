@@ -28,9 +28,9 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`absolute  bottom-0 w-full  ease-in-out bg-white  z-10`}
+      className={`absolute  bottom-0 w-full  ease-in-out bg-white z-10`}
     >
-      <div className="container flex items-center justify-between py-5 max-h-[7.063rem] md:py-11">
+      <div className="container flex items-center justify-between py-5 max-h-[7.063rem] md:py-7">
         <ul className="hidden md:flex gap-4 lg:gap-5 xl:gap-10 text-[0.813rem] lg:text-base">
           {menuLinks.map((item, index) => (
             <li className="text-red font-area-semibold xl:text-xl" key={index}>
