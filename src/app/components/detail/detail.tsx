@@ -63,7 +63,7 @@ const DetailSection = () => {
   );
 
   return (
-    <section id="details" ref={setRefs} className="py-10 md:py-[6.2vw] detail">
+    <section id="details" ref={setRefs} className="py-10 md:py-[9.02vw] detail">
       {/* slider marque */}
 
       <div className="bg-red py-7 overflow-hidden md:py-[4.75rem]">
