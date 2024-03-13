@@ -32,3 +32,10 @@
 .swiper-pagination-bullet-active {
   background-color: #a02710 !important;
 }
+
+@media (max-width: 1024px) {
+  .swiper-pagination-bullet {
+    margin-top: 1.643rem !important;
+    margin-bottom: 1.643rem !important;
+  }
+}

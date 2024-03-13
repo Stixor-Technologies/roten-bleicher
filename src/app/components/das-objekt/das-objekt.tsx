@@ -62,7 +62,7 @@ const DasObjekt = () => {
           Schöner leben im Roten Feld.
         </h4>
 
-        <p className="xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 py-10 md:py-[4.75vw]">
+        <p className="xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 py-10 md:pt-[4.75vw] md:pb-[13.8vw]">
           <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)]  text-black">
             Das Gebäudeensemble besteht aus einem linearen Baukörper, der sich
             entlang der Willy-Brandt-Straße positioniert sowie einem
