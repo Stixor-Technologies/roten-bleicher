@@ -202,7 +202,7 @@ const DieLage = () => {
               className="image-marque-item flex-[0_0_170%] md:flex-[0_0_120%] relative text-center px-2 md:px-4"
             >
               <Image
-                src={marqueItem}
+                src={marqueItem.src}
                 width={700}
                 height={200}
                 alt=""
@@ -219,14 +219,14 @@ const DieLage = () => {
 
         <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => {
-            console.log("imageSrc", image);
+            console.log("imageSrc", image.src);
             return (
               <div
                 key={index}
                 className={`slide h-full absolute left-0 flex w-0`}
               >
                 <Image
-                  src={image}
+                  src={image.src}
                   fill
                   alt={`banner-slider-image-${index}`}
                   className="w-full object-cover"
@@ -253,7 +253,7 @@ const DieLage = () => {
               className={`slide h-full absolute left-0 flex w-0`}
             >
               <Image
-                src={image}
+                src={image.src}
                 fill
                 alt={`banner-slider-image-${index}`}
                 className="w-full object-cover"
