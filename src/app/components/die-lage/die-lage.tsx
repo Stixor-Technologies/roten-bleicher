@@ -4,18 +4,6 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
-import MarqueGroup from "../../../../public/images/die-lage/marque/marque-group.svg";
-import MarqueGroup2 from "../../../../public/images/die-lage/marque/marque-group-2.svg";
-
-import SliderLeft1 from "../../../../public/images/die-lage/slider-left/slider-left-1.png";
-import SliderLeft2 from "../../../../public/images/die-lage/slider-left/slider-left-2.png";
-import SliderLeft3 from "../../../../public/images/die-lage/slider-left/slider-left-3.png";
-import SliderLeft4 from "../../../../public/images/die-lage/slider-left/slider-left-4.png";
-
-import SliderRight1 from "../../../../public/images/die-lage/slider-right/slider-right-1.png";
-import SliderRight2 from "../../../../public/images/die-lage/slider-right/slider-right-2.png";
-import SliderRight3 from "../../../../public/images/die-lage/slider-right/slider-right-3.png";
-import SliderRight4 from "../../../../public/images/die-lage/slider-right/slider-right-4.png";
 
 import GroupLines from "../../../../public/images/die-lage/line-group.svg";
 import Map from "../../../../public//images/die-lage/map.png";
@@ -99,7 +87,6 @@ const DieLage = () => {
             // cycle through slide targets
             const prev = currentSlide;
             currentSlide = slideWrap(++currentIndex);
-            console.log(prev, currentSlide);
             // gsap
             //   .timeline({
             //     // call the next slider to play
@@ -228,7 +215,6 @@ const DieLage = () => {
 
         <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => {
-            console.log("imageSrc", image);
             return (
               <div
                 key={index}
