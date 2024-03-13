@@ -217,7 +217,7 @@ const DieLage = () => {
       <div className="flex bg-light-purple section-galleries mb-[14.65vw]">
         {/* slider-left */}
 
-        <div className="w-full aspect-square max-h-[835px] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => (
             <div
               key={index}
@@ -243,7 +243,7 @@ const DieLage = () => {
         </div>
 
         {/* slider-right */}
-        <div className="w-full aspect-square max-h-[835px] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
           {sliderRightData?.map((image, index) => (
             <div
               key={index}
