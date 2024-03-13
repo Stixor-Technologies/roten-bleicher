@@ -281,7 +281,9 @@ const DieLage = () => {
       <div className="container">
         <div className="xl:w-[83.3%] mx-auto">
           <div ref={fadedTextContainer} className="mb-[8vw]">
-            <h3 className="font-area-bold mb-6 md:text-xl">Die Lage</h3>
+            <h3 className="font-area-bold mb-[1.438rem] md:text-xl">
+              Die Lage
+            </h3>
 
             <p
               ref={fadedText}
