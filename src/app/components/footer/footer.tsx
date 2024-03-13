@@ -10,8 +10,8 @@ const Footer = () => {
     <footer className="bg-light-purple text-white">
       <div className="container flex flex-col pt-[3.313rem] pb-[3.875rem] gap-20 justify-between text-lg md:text-xl xl:flex-row">
         {/* left side */}
-        <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-[5.438rem] xl:max-w-[742px]">
-          <div className="flex-1">
+        <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-[5.438rem] xl:max-w-[47.5rem]">
+          <div className="flex-1 xl:flex-initial xl:w-[20.438rem]">
             <Image
               src={GraubnerLogo}
               width={260}
@@ -32,7 +32,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 xl:flex-initial xl:w-[21.625rem]">
             <Image
               src={SchenkLogo}
               width={404}
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         {/* right side */}
-        <div className="flex flex-col gap-8 xl:justify-between xl:items-end font-area-thin">
+        <div className="flex flex-col xl:justify-between xl:items-end font-area-thin gap-10 xl:self-center xl:gap-[7.063rem]">
           <Image src={FooterLogo} width={334} height={94} alt="footer-logo" />
 
           <div>
