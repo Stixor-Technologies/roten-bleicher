@@ -20,7 +20,7 @@ const config: Config = {
         DEFAULT: "1rem",
         sm: "2rem",
         md: "4rem",
-        "3xl": "8.8rem",
+        "3xl": "8.75rem",
       },
     },
 

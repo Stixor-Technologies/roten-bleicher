@@ -200,7 +200,7 @@ const DieLage = () => {
       <div className=" bg-light-purple">
         <ul
           ref={marqueRow}
-          className="flex relative overflow-hidden whitespace-nowrap pt-20 pb-10 md:pb-[3.696rem] md:pt-[19vw]"
+          className="flex relative overflow-hidden whitespace-nowrap pt-20 pb-10 md:pb-[3.696rem] md:pt-[14.424vw]"
         >
           {marqueData?.map((marqueItem, index) => (
             <li
@@ -224,7 +224,7 @@ const DieLage = () => {
       <div className="flex bg-light-purple section-galleries mb-[14.65vw]">
         {/* slider-left */}
 
-        <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[52.188rem] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => {
             return (
               <div
@@ -252,7 +252,7 @@ const DieLage = () => {
         </div>
 
         {/* slider-right */}
-        <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[52.188rem] md:px-0 relative section-gallery">
           {sliderRightData?.map((image, index) => (
             <div
               key={index}
@@ -279,7 +279,7 @@ const DieLage = () => {
       </div>
 
       <div className="container">
-        <div className="xl:w-[83.3%] mx-auto">
+        <div className="xl:w-[83.17%] mx-auto">
           <div ref={fadedTextContainer} className="mb-[8vw]">
             <h3 className="font-area-bold mb-[1.438rem] md:text-xl">
               Die Lage
@@ -287,7 +287,7 @@ const DieLage = () => {
 
             <p
               ref={fadedText}
-              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black"
+              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black leading-[4.1rem]"
             >
               Nam nec magna quis nibh mollis euismod eget et lectus. Quisque
               volutpat est non arcu pellentesque, ut bibendum magna consequat.

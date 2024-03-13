@@ -175,7 +175,7 @@ const FaqItem = ({
               width={44}
               height={44}
               alt="expand-answer-icon"
-              className="opacity-100 group-hover:opacity-100 transition-all ease-in-out duration-300 w-[2rem] md:w-auto"
+              className="opacity-100 group-hover:opacity-100 transition-all ease-in-out duration-300 w-[2rem] md:w-auto max-w-[2.75rem]"
             />
           )}
 
@@ -256,7 +256,9 @@ const FAQ = () => {
     <section ref={ref} id="gundrisse" className="bg-light-purple mt-[1.938rem]">
       <div className="container py-10 md:py-[7.82vw]">
         <div className="flex flex-col justify-between lg:flex-row">
-          <h3 className="font-area-bold mb-6 md:text-xl w-[35%]">Grundrisse</h3>
+          <h3 className="font-area-bold mb-6 md:text-[1.438rem] w-[35%]">
+            Grundrisse
+          </h3>
 
           <p className="text-white md:text-[1.563rem] flex-1">
             Morbi aliquam, neque eu commodo blandit, odio ipsum facilisis sem,

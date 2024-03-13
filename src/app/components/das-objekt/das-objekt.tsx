@@ -63,7 +63,7 @@ const DasObjekt = () => {
         </h4>
 
         <p className="xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 py-10 md:pt-[4.75vw] md:pb-[13.8vw]">
-          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)]  text-black">
+          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)]  text-black 2xl:leading-[2.159rem]">
             Das Gebäudeensemble besteht aus einem linearen Baukörper, der sich
             entlang der Willy-Brandt-Straße positioniert sowie einem
             freiste-henden Punkthaus auf der lärmabge-wandten Seite am
@@ -75,7 +75,7 @@ const DasObjekt = () => {
             ausreichend Spiel-raum für durchgrünte Außenräume und Kinder-
           </span>
 
-          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)] text-black">
+          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)] text-black 2xl:leading-[2.159rem]">
             spielflächen bietet. Es entstehen insgesamt 71 Wohnungen mit 1 bis 5
             Zimmern; 30% sind miet-preisgebunden. Mauris id ante lectus. Nunc
             non lectus vel massa auctor dapibus. Sed convallis viverra lorem.
