@@ -3,7 +3,6 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useMenuStore } from "../../../../store/menu-store";
 import { menuLinks } from "./menu-links";
-import { useActiveSection } from "@/utils/activeSectionContext";
 
 const Sidebar = () => {
   const menuButtonRef = useRef<HTMLButtonElement | null>(null);
