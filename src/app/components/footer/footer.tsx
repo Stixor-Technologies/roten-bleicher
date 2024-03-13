@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-light-purple text-white">
       <div className="container flex flex-col pt-[3.313rem] pb-[4.375rem] gap-20 justify-between text-lg md:text-xl xl:flex-row">
         {/* left side */}
-        <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-[5.438rem]">
+        <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-[5.438rem] xl:max-w-[742px]">
           <div className="flex-1">
             <Image
               src={GraubnerLogo}
@@ -38,7 +38,7 @@ const Footer = () => {
               width={404}
               height={31}
               alt="schenk-logo"
-              className="sm:h-[54px]"
+              className="sm:h-[54px] object-contain"
             />
 
             <address className="not-italic leading-[1.55] my-[1.288rem]">
@@ -57,8 +57,14 @@ const Footer = () => {
         </div>
 
         {/* right side */}
-        <div className="flex flex-col gap-8 xl:justify-between xl:items-end">
-          <Image src={FooterLogo} width={334} height={94} alt="footer-logo" />
+        <div className="flex flex-col gap-8 xl:justify-between xl:items-end font-area-thin">
+          <Image
+            src={FooterLogo}
+            width={334}
+            height={94}
+            alt="footer-logo"
+            className="xl:mt-6"
+          />
 
           <div>
             <Link
@@ -68,7 +74,7 @@ const Footer = () => {
             >
               Impressum
             </Link>
-            <span> | </span>
+            <span className="mx-1.5"> | </span>
             <Link
               href={"#"}
               target="_blank"
