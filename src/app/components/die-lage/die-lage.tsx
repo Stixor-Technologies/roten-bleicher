@@ -29,14 +29,22 @@ const DieLage = () => {
   const fadedText = useRef<HTMLParagraphElement | null>(null);
   const fadedTextContainer = useRef<HTMLDivElement | null>(null);
 
-  const marqueData = [MarqueGroup, MarqueGroup2];
+  const marqueData = [
+    "/images/die-lage/marque/marque-group.svg",
+    "/images/die-lage/marque/marque-group-2.svg",
+  ];
 
-  const sliderLeftData = [SliderLeft1, SliderLeft2, SliderLeft3, SliderLeft4];
+  const sliderLeftData = [
+    "/images/die-lage/slider-left/slider-left-1.png",
+    "/images/die-lage/slider-left/slider-left-2.png",
+    "/images/die-lage/slider-left/slider-left-3.png",
+    "/images/die-lage/slider-left/slider-left-4.png",
+  ];
   const sliderRightData = [
-    SliderRight1,
-    SliderRight2,
-    SliderRight3,
-    SliderRight4,
+    "/images/die-lage/slider-right/slider-right-1.png",
+    "/images/die-lage/slider-right/slider-right-2.png",
+    "/images/die-lage/slider-right/slider-right-3.png",
+    "/images/die-lage/slider-right/slider-right-4.png",
   ];
 
   useGSAP(
@@ -203,7 +211,7 @@ const DieLage = () => {
               className="image-marque-item flex-[0_0_170%] md:flex-[0_0_120%] relative text-center px-2 md:px-4"
             >
               <Image
-                src={marqueItem.src}
+                src={marqueItem}
                 width={700}
                 height={200}
                 alt=""
@@ -220,14 +228,14 @@ const DieLage = () => {
 
         <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => {
-            console.log("imageSrc", image.src);
+            console.log("imageSrc", image);
             return (
               <div
                 key={index}
                 className={`slide h-full absolute left-0 flex w-0`}
               >
                 <Image
-                  src={image.src}
+                  src={`${image}`}
                   fill
                   alt={`banner-slider-image-${index}`}
                   className="w-full object-cover"
@@ -254,7 +262,7 @@ const DieLage = () => {
               className={`slide h-full absolute left-0 flex w-0`}
             >
               <Image
-                src={image.src}
+                src={image}
                 fill
                 alt={`banner-slider-image-${index}`}
                 className="w-full object-cover"
