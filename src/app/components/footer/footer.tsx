@@ -58,13 +58,7 @@ const Footer = () => {
 
         {/* right side */}
         <div className="flex flex-col gap-8 xl:justify-between xl:items-end font-area-thin">
-          <Image
-            src={FooterLogo}
-            width={334}
-            height={94}
-            alt="footer-logo"
-            className="xl:mt-6"
-          />
+          <Image src={FooterLogo} width={334} height={94} alt="footer-logo" />
 
           <div>
             <Link
