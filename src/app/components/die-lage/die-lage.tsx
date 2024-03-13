@@ -218,20 +218,23 @@ const DieLage = () => {
         {/* slider-left */}
 
         <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
-          {sliderLeftData?.map((image, index) => (
-            <div
-              key={index}
-              className={`slide h-full absolute left-0 flex w-0`}
-            >
-              <Image
-                src={image}
-                fill
-                alt={`banner-slider-image-${index}`}
-                className="w-full object-cover"
-                priority
-              />
-            </div>
-          ))}
+          {sliderLeftData?.map((image, index) => {
+            console.log("imageSrc", image);
+            return (
+              <div
+                key={index}
+                className={`slide h-full absolute left-0 flex w-0`}
+              >
+                <Image
+                  src={image}
+                  fill
+                  alt={`banner-slider-image-${index}`}
+                  className="w-full object-cover"
+                  priority
+                />
+              </div>
+            );
+          })}
 
           <Image
             src={GroupLines}
