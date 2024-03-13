@@ -115,12 +115,8 @@ const Contact = () => {
   };
 
   return (
-    <section
-      ref={ref}
-      id="kontakt"
-      className="bg-red py-12 md:py-[4.85vw] 2xl:h-[382px]"
-    >
-      <div className="container">
+    <section ref={ref} id="kontakt" className="bg-red py-12 md:py-[4.85vw]">
+      <div className="container 2xl:my-2">
         <h3 className="font-area-extrabold md:text-[1.438rem] mb-[0.678rem] text-light-purple">
           Kontakt
         </h3>
@@ -141,7 +137,7 @@ const Contact = () => {
               width={63}
               height={71}
               alt=""
-              className="w-[1.6rem] lg:w-[3rem] 2xl:w-[63px] -mt-2"
+              className="w-[1.6rem] lg:w-[3rem] 2xl:w-[62.8px] 2xl:h-[71.5px] -mt-2"
             />
           ) : (
             <Image
@@ -166,8 +162,8 @@ const Contact = () => {
                 <>
                   <Form>
                     <div className="grid grid-cols-1 gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4">
-                      {/* <div className="flex flex-col md:py-8 2xl:px-4 gap-6"> */}
-                      <div className="space-y-6 md:max-w-[33.5rem]">
+                      {/* <div className="flex flex-col gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4"> */}
+                      <div className="space-y-6 md:max-w-[33.5rem] 2xl:w-[33.5rem]">
                         {formFields?.slice(0, 3)?.map((fieldName) => {
                           const typedFieldName =
                             fieldName as keyof typeof fieldTypes;
@@ -175,7 +171,7 @@ const Contact = () => {
                             <div key={fieldName}>
                               <Field
                                 name={fieldName}
-                                className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent placeholder:text-base focus:outline-none`}
+                                className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent placeholder:text-base focus:outline-none placeholder:text-[1.875rem] text-[1.875rem]`}
                                 placeholder={placeholders[typedFieldName]}
                               />
 
@@ -190,7 +186,7 @@ const Contact = () => {
                         })}
                       </div>
 
-                      <div className="max-h-[320px] flex-1">
+                      <div className="max-h-[320px] md:max-w-[33.5rem] 2xl:w-[33.5rem] flex-1 2xl:flex-initial">
                         {formFields?.slice(3, 4)?.map((fieldName) => {
                           const typedFieldName =
                             fieldName as keyof typeof fieldTypes;
@@ -202,7 +198,7 @@ const Contact = () => {
                                   key={fieldName}
                                   as="textarea"
                                   name={fieldName}
-                                  className={`w-full h-full border border-light-purple px-4 py-4 text-dark-purple placeholder-light-purple placeholder:font-area-thin placeholder:text-base focus:outline-none bg-transparent resize-none`}
+                                  className={`w-full h-full border border-light-purple px-4 py-4 text-dark-purple placeholder-light-purple placeholder:font-area-thin placeholder:text-base focus:outline-none bg-transparent resize-none placeholder:text-[1.875rem] text-[1.875rem]`}
                                   placeholder={placeholders[typedFieldName]}
                                   rows={6}
                                 />
