@@ -115,7 +115,11 @@ const Contact = () => {
   };
 
   return (
-    <section ref={ref} id="kontakt" className="bg-red py-12 md:py-[4.85vw]">
+    <section
+      ref={ref}
+      id="kontakt"
+      className="bg-red py-12 md:py-[4.85vw] 2xl:h-[382px]"
+    >
       <div className="container">
         <h3 className="font-area-extrabold md:text-[1.438rem] mb-[0.678rem] text-light-purple">
           Kontakt

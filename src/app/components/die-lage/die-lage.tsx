@@ -221,7 +221,7 @@ const DieLage = () => {
       </div>
 
       {/* sliders */}
-      <div className="flex bg-light-purple section-galleries mb-[14.65vw]">
+      <div className="flex bg-light-purple section-galleries mb-[9.8vw]">
         {/* slider-left */}
 
         <div className="w-full aspect-square max-h-[52.188rem] md:px-0 relative section-gallery">
