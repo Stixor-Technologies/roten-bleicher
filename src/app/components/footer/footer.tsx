@@ -8,7 +8,7 @@ import SchenkLogo from "../../../../public/images/footer/schenk-logo.svg";
 const Footer = () => {
   return (
     <footer className="bg-light-purple text-white">
-      <div className="container flex flex-col pt-[3.313rem] pb-[4.375rem] gap-20 justify-between text-lg md:text-xl xl:flex-row">
+      <div className="container flex flex-col pt-[3.313rem] pb-[3.875rem] gap-20 justify-between text-lg md:text-xl xl:flex-row">
         {/* left side */}
         <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-[5.438rem] xl:max-w-[742px]">
           <div className="flex-1">
