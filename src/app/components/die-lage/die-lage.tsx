@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -9,6 +9,7 @@ import GroupLines from "../../../../public/images/die-lage/line-group.svg";
 import Map from "../../../../public//images/die-lage/map.png";
 
 import { horizontalLoop } from "@/utils/horizontal-loop";
+import useSectionInView from "@/utils/useSectionInView";
 
 const DieLage = () => {
   gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -16,6 +17,15 @@ const DieLage = () => {
   const marqueRow = useRef<HTMLUListElement | null>(null);
   const fadedText = useRef<HTMLParagraphElement | null>(null);
   const fadedTextContainer = useRef<HTMLDivElement | null>(null);
+  const { ref } = useSectionInView("#die-lage");
+
+  const setRefs = useCallback(
+    (node: any) => {
+      marqueContainer.current = node;
+      ref(node);
+    },
+    [ref],
+  );
 
   const marqueData = [
     "/images/die-lage/marque/marque-group.svg",
@@ -185,7 +195,7 @@ const DieLage = () => {
   );
 
   return (
-    <section id="die-lage" ref={marqueContainer} className="">
+    <section id="die-lage" ref={setRefs} className="">
       {/* slider marque */}
       <div className=" bg-light-purple">
         <ul
@@ -203,6 +213,7 @@ const DieLage = () => {
                 height={200}
                 alt=""
                 className={`w-full max-h-[3.715rem]`}
+                priority
               />
             </li>
           ))}
@@ -294,6 +305,7 @@ const DieLage = () => {
             height={300}
             alt="map"
             className="w-full mb-16 md:mb-[12.5vw]"
+            priority
           />
         </div>
       </div>

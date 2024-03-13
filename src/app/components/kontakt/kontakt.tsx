@@ -8,6 +8,7 @@ import Image from "next/image";
 import ArrowPurple from "../../../../public/images/icons/arrow-purple.svg";
 import CrossPurple from "../../../../public/images/icons/cross-purple.svg";
 import Spinner from "../spinner/spinner";
+import useSectionInView from "@/utils/useSectionInView";
 
 type FormValue = {
   firstName: string;
@@ -48,6 +49,7 @@ const Contact = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [showToast, setShowToast] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string>("");
+  const { ref } = useSectionInView("#kontakt");
 
   const { contextSafe } = useGSAP();
 
@@ -113,7 +115,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="bg-red py-12 md:py-[4.85vw]">
+    <section ref={ref} id="kontakt" className="bg-red py-12 md:py-[4.85vw]">
       <div className="container">
         <h3 className="font-area-extrabold md:text-[1.438rem] mb-[0.678rem] text-light-purple">
           Kontakt

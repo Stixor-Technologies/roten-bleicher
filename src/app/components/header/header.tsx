@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Hamburger from "./menu/hamburger";
 import Sidebar from "./menu/sidebar";
@@ -9,11 +9,14 @@ import gsap from "gsap";
 import { ScrollTrigger, ScrollToPlugin } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
+import { useMenuStore } from "@/store/menu-store";
 
 const Header = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   const headerRef = useRef<HTMLDivElement | null>(null);
+
+  const activeSection = useMenuStore((state) => state.activeSection);
 
   useGSAP(() => {
     ScrollTrigger.create({
@@ -41,7 +44,12 @@ const Header = () => {
       <div className="container flex items-center justify-between py-2 h-full md:py-7">
         <ul className="hidden md:flex gap-4 lg:gap-5 xl:gap-10 text-[0.813rem] lg:text-base">
           {menuLinks.map((item, index) => (
-            <li className="text-red font-area-semibold xl:text-xl" key={index}>
+            <li
+              className={`text-red font-area-semibold relative xl:text-xl after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-red after:transition-width after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full ${
+                activeSection === item?.id && "after:w-full"
+              }`}
+              key={index}
+            >
               <button
                 onClick={() => {
                   scrollToSection(item?.id);
@@ -63,6 +71,9 @@ const Header = () => {
               height={56}
               alt="roten-bleicher"
               className="w-32 lg:w-auto max-w-[201px]"
+              onClick={() => {
+                scrollToSection("#banner");
+              }}
             />
           </Link>
         </div>

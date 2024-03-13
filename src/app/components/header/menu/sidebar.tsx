@@ -3,11 +3,13 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useMenuStore } from "../../../../store/menu-store";
 import { menuLinks } from "./menu-links";
+import { useActiveSection } from "@/utils/activeSectionContext";
 
 const Sidebar = () => {
   const menuButtonRef = useRef<HTMLButtonElement | null>(null);
   const sideBarMenu = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
+  const activeSection = useMenuStore((state) => state.activeSection);
 
   const isMenuOpen = useMenuStore((state) => state.isMenuOpen);
   const setIsMenuOpen = useMenuStore((state) => state.setIsMenuOpen);
@@ -112,7 +114,12 @@ const Sidebar = () => {
         >
           <ul className="space-y-[7vw] text-[7vw] px-8 md:text-left">
             {menuLinks.map((item, index) => (
-              <li className="text-red font-area-extrabold" key={index}>
+              <li
+                className={`text-red font-area-bold w-max relative after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-red after:transition-width after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full ${
+                  activeSection === item?.id && "after:w-full"
+                }`}
+                key={index}
+              >
                 <button
                   onClick={() => {
                     scrollToSection(item?.id);

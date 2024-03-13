@@ -7,6 +7,7 @@ import PlusIcon from "../../../../public/images/icons/plus-icon.svg";
 import CrossIcon from "../../../../public/images/icons/cross-red.svg";
 import Link from "next/link";
 import ArrowRed from "../../../../public/images/icons/arrow-red.svg";
+import useSectionInView from "@/utils/useSectionInView";
 
 type FaqITemType = {
   question: string;
@@ -81,7 +82,6 @@ const FaqItem = ({
 
     const activeFaq = document.querySelector(".active");
     const tallBar = document.querySelector(".icon-animate");
-    console.log(tallBar);
     if (activeFaq) {
       gsap.to(activeFaq, {
         height: "0",
@@ -246,13 +246,14 @@ const FaqItem = ({
 
 const FAQ = () => {
   const [activeFaq, setActiveFaq] = useState<number>(-1);
+  const { ref } = useSectionInView("#gundrisse");
 
   const toggleActive = (id: number) => {
     setActiveFaq((prevActiveFaq) => (prevActiveFaq === id ? -1 : id));
   };
 
   return (
-    <section id="gundrisse" className="bg-light-purple mt-[1.938rem]">
+    <section ref={ref} id="gundrisse" className="bg-light-purple mt-[1.938rem]">
       <div className="container py-10 md:py-[7.82vw]">
         <div className="flex flex-col justify-between lg:flex-row">
           <h3 className="font-area-bold mb-6 md:text-xl w-[35%]">Grundrisse</h3>

@@ -4,9 +4,12 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
+import useSectionInView from "@/utils/useSectionInView";
 
 const Philosophy = () => {
   gsap.registerPlugin(ScrollTrigger, SplitText);
+
+  const { ref } = useSectionInView("#unsere-philosophie");
 
   const fadedText = useRef<HTMLParagraphElement | null>(null);
   const fadedTextContainer = useRef<HTMLDivElement | null>(null);
@@ -31,7 +34,11 @@ const Philosophy = () => {
   });
 
   return (
-    <section id="unsere-philosophie" className="container pb-20 md:pb-[8.3vw]">
+    <section
+      ref={ref}
+      id="unsere-philosophie"
+      className="container pb-20 md:pb-[8.3vw]"
+    >
       <div className="flex relative">
         <Image
           src={PhilosophyLanding}

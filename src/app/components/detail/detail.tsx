@@ -1,16 +1,27 @@
-import React, { useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import Image from "next/image";
 import PhilosophyLanding from "../../../../public/images/philosophie/c-philosophy-landing.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { horizontalLoop } from "@/utils/horizontal-loop";
+import useSectionInView from "@/utils/useSectionInView";
 
 const DetailSection = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const marqueContainer = useRef<HTMLElement | null>(null);
   const marqueRow = useRef<HTMLUListElement | null>(null);
+
+  const { ref } = useSectionInView("#details");
+
+  const setRefs = useCallback(
+    (node: any) => {
+      marqueContainer.current = node;
+      ref(node);
+    },
+    [ref],
+  );
 
   const marqueData = [
     "71  Wohnungen",
@@ -52,11 +63,7 @@ const DetailSection = () => {
   );
 
   return (
-    <section
-      id="details"
-      ref={marqueContainer}
-      className="py-10 md:py-[6.2vw] detail"
-    >
+    <section id="details" ref={setRefs} className="py-10 md:py-[6.2vw] detail">
       {/* slider marque */}
 
       <div className="bg-red py-7 overflow-hidden md:py-[4.75rem]">

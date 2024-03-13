@@ -9,12 +9,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination, Autoplay } from "swiper/modules";
+import useSectionInView from "@/utils/useSectionInView";
 
 const DasObjekt = () => {
   const sliderImages = [PhilosophyLanding, Das2, Das3];
+  const { ref } = useSectionInView("#das-objekt");
 
   return (
-    <section id="das-objekt" className="">
+    <section ref={ref} id="das-objekt" className="">
       <div className="flex items-center gap-10 mb-[5.22vw]">
         <Swiper
           pagination={{
