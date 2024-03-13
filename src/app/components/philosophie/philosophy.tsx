@@ -54,7 +54,7 @@ const Philosophy = () => {
 
         <p
           ref={fadedText}
-          className="text-[clamp(1rem,3.2vw,2.813rem)] text-black leading-[4.209rem]"
+          className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[4.209rem]"
         >
           Nahe der Innenstadt, unweit des Kurparks, gute Einkaufs-möglich-keiten
           – der Lüneburger Stadtteil Rotes Feld gehört zu den attrak-tivsten

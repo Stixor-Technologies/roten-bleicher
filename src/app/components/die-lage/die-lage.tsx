@@ -287,7 +287,7 @@ const DieLage = () => {
 
             <p
               ref={fadedText}
-              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black leading-[4.1rem]"
+              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2x:leading-[4.1rem]"
             >
               Nam nec magna quis nibh mollis euismod eget et lectus. Quisque
               volutpat est non arcu pellentesque, ut bibendum magna consequat.

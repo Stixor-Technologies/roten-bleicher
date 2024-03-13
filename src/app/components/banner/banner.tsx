@@ -30,124 +30,127 @@ const Banner = () => {
     },
   ];
 
+  const bannerContainer = useRef<HTMLElement | null>(null);
   const overLappingPanel = useRef<HTMLElement | null>(null);
   const sliderContainer = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(() => {
-    ScrollTrigger.create({
-      trigger: overLappingPanel.current,
-      start: "top top",
-      end: "+=100%",
-      pin: true,
-      pinSpacing: false,
-      scrub: 1,
-    });
+  useGSAP(
+    () => {
+      ScrollTrigger.create({
+        trigger: overLappingPanel.current,
+        start: "top top",
+        end: "+=100%",
+        pin: true,
+        pinSpacing: false,
+        scrub: 1,
+      });
 
-    // auto play slider
-    const slides: HTMLDivElement[] = gsap.utils.toArray(".slide");
-    let moveSlideTL = gsap.timeline();
+      // auto play slider
+      const slides: HTMLDivElement[] = gsap.utils.toArray(".slide");
+      let moveSlideTL = gsap.timeline();
 
-    const slideTransition = () => {
-      if (!moveSlideTL.isActive()) {
-        const slideFrom = document.querySelector(
-          ".slide.active",
-        ) as HTMLDivElement;
-        const sectionToIndex = slides.indexOf(slideFrom);
-        if (sectionToIndex !== slides.length - 1) {
-          const slideTo = slides[sectionToIndex + 1];
-          moveToSlide(slideFrom, slideTo);
-        } else {
-          const slideTo = slides[0];
-          moveToSlide(slideFrom, slideTo);
+      const slideTransition = () => {
+        if (!moveSlideTL.isActive()) {
+          const slideFrom = document.querySelector(
+            ".slide.active",
+          ) as HTMLDivElement;
+          const sectionToIndex = slides.indexOf(slideFrom);
+          if (sectionToIndex !== slides.length - 1) {
+            const slideTo = slides[sectionToIndex + 1];
+            moveToSlide(slideFrom, slideTo);
+          } else {
+            const slideTo = slides[0];
+            moveToSlide(slideFrom, slideTo);
+          }
         }
-      }
-    };
+      };
 
-    const moveToSlide = (
-      slideFrom: HTMLDivElement,
-      slideTo: HTMLDivElement,
-    ) => {
-      if (slides.indexOf(slideFrom) < slides.indexOf(slideTo)) {
-        moveSlideTL = gsap
-          .timeline({
-            onStartParams: [slideTo, slideFrom],
-          })
-          .to(slideFrom, {
-            opacity: 0,
-            autoAlpha: 0,
-            ease: "power4.inOut",
-            clearProps: "all",
-            className: "slide h-full w-full absolute opacity-1 flex opacity-0",
-          })
-          .to(
-            slideTo,
-            {
-              opacity: 1,
-              autoAlpha: 1,
+      const moveToSlide = (
+        slideFrom: HTMLDivElement,
+        slideTo: HTMLDivElement,
+      ) => {
+        if (slides.indexOf(slideFrom) < slides.indexOf(slideTo)) {
+          moveSlideTL = gsap
+            .timeline({
+              onStartParams: [slideTo, slideFrom],
+            })
+            .to(slideFrom, {
+              opacity: 0,
+              autoAlpha: 0,
               ease: "power4.inOut",
-              className: "active slide h-full w-full absolute opacity-0 flex",
-              // className:
-              //   "active slide max-w-[650px] w-full h-[210px] absolute opacity-0 flex",
-              duration: 1,
-            },
-            0,
-          );
-      } else {
-        moveSlideTL = gsap
-          .timeline({
-            onStartParams: [slideTo, slideFrom],
-          })
-          .to(slideFrom, {
-            opacity: 0,
-            autoAlpha: 0,
-            ease: "power4.inOut",
-            clearProps: "all",
-            className: "slide h-full w-full absolute opacity-1 flex opacity-0",
-            duration: 1,
-          })
-          .to(
-            slideTo,
-
-            {
-              opacity: 1,
-              autoAlpha: 1,
+              clearProps: "all",
+              className: "slide h-full w-full absolute flex opacity-0",
+            })
+            .to(
+              slideTo,
+              {
+                opacity: 1,
+                autoAlpha: 1,
+                ease: "power4.inOut",
+                className: "active slide h-full w-full absolute opacity-0 flex",
+                duration: 1,
+              },
+              0,
+            );
+        } else {
+          moveSlideTL = gsap
+            .timeline({
+              onStartParams: [slideTo, slideFrom],
+            })
+            .to(slideFrom, {
+              opacity: 0,
+              autoAlpha: 0,
               ease: "power4.inOut",
-              className: "active slide h-full w-full absolute opacity-0 flex",
+              clearProps: "all",
+              className:
+                "slide h-full w-full absolute opacity-1 flex opacity-0",
               duration: 1,
-            },
-            0,
-          );
-      }
-    };
+            })
+            .to(
+              slideTo,
 
-    let sliderTimeLine = gsap.timeline();
+              {
+                opacity: 1,
+                autoAlpha: 1,
+                ease: "power4.inOut",
+                className: "active slide h-full w-full absolute opacity-0 flex",
+                duration: 1,
+              },
+              0,
+            );
+        }
+      };
 
-    sliderTimeLine.to(
-      {},
-      { onRepeat: slideTransition, repeat: -1, duration: 1.5 },
-    );
+      let sliderTimeLine = gsap.timeline();
 
-    ScrollTrigger.create({
-      trigger: sliderContainer.current,
-      start: "top 40%",
-      end: "+=100%",
-      pin: false,
-      pinSpacing: false,
-      animation: sliderTimeLine,
-      onLeaveBack: () => {
-        sliderTimeLine.pause();
-      },
-      onLeave: () => {
-        sliderTimeLine.pause();
-      },
-      onEnterBack: () => {
-        sliderTimeLine.play();
-      },
-    });
-  });
+      sliderTimeLine.to(
+        {},
+        { onRepeat: slideTransition, repeat: -1, duration: 1.5 },
+      );
+
+      ScrollTrigger.create({
+        trigger: sliderContainer.current,
+        start: "top 40%",
+        end: "+=100%",
+        pin: false,
+        pinSpacing: false,
+        animation: sliderTimeLine,
+        onLeaveBack: () => {
+          sliderTimeLine.pause();
+        },
+        onLeave: () => {
+          sliderTimeLine.pause();
+        },
+        onEnterBack: () => {
+          sliderTimeLine.play();
+        },
+      });
+    },
+    { scope: bannerContainer },
+  );
 
   return (
-    <section id="banner" className="mb-20 md:mb-[9.23vw]">
+    <section ref={bannerContainer} id="banner" className="mb-20 md:mb-[9.23vw]">
       <section
         ref={overLappingPanel}
         className="panel h-screen bg-smoke-red relative flex items-center justify-center overflow-hidden"
