@@ -149,24 +149,24 @@ const DieLage = () => {
 
       // sliders[0].play();
 
-      // ScrollTrigger.create({
-      //   trigger: marqueContainer.current,
-      //   start: "top 60%", // Adjust this value as needed
-      //   onEnter: () => {
-      //     sliders[0].play();
-      //   },
-      //   onLeave: () => {
-      //     sliders[0].pause();
-      //   },
+      ScrollTrigger.create({
+        trigger: marqueContainer.current,
+        start: "top 60%", // Adjust this value as needed
+        onEnter: () => {
+          sliders[0].play();
+        },
+        onLeave: () => {
+          sliders[0].pause();
+        },
 
-      //   onEnterBack: () => {
-      //     sliders[0].play();
-      //   },
+        onEnterBack: () => {
+          sliders[0].play();
+        },
 
-      //   onLeaveBack: () => {
-      //     sliders[0].pause();
-      //   },
-      // });
+        onLeaveBack: () => {
+          sliders[0].pause();
+        },
+      });
 
       let text = new SplitText(fadedText.current, { type: "chars" });
       let chars = text.chars;
@@ -217,7 +217,7 @@ const DieLage = () => {
       <div className="flex bg-light-purple section-galleries mb-[14.65vw]">
         {/* slider-left */}
 
-        <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[835px] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => (
             <div
               key={index}
@@ -238,12 +238,12 @@ const DieLage = () => {
             width={153}
             height={20}
             alt=""
-            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-14 md:w-auto"
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[153px]"
           />
         </div>
 
         {/* slider-right */}
-        <div className="w-full aspect-square max-h-[86.3vh] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[835px] md:px-0 relative section-gallery">
           {sliderRightData?.map((image, index) => (
             <div
               key={index}
@@ -264,7 +264,7 @@ const DieLage = () => {
             width={153}
             height={20}
             alt=""
-            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-14 md:w-auto"
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[153px]"
           />
         </div>
       </div>
