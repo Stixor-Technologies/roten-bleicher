@@ -89,6 +89,15 @@ const Sidebar = () => {
     };
   }, [handleDocumentClick]);
 
+  const scrollToSection = (targetSection: string) => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: { y: targetSection, offsetY: 113 },
+      ease: "power2",
+    });
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <div
@@ -103,8 +112,14 @@ const Sidebar = () => {
         >
           <ul className="space-y-[7vw] text-[7vw] px-8 md:text-left">
             {menuLinks.map((item, index) => (
-              <li className="text-smoke-red font-area-extrabold" key={index}>
-                {item.name}
+              <li className="text-red font-area-extrabold" key={index}>
+                <button
+                  onClick={() => {
+                    scrollToSection(item?.id);
+                  }}
+                >
+                  {item.name}
+                </button>
               </li>
             ))}
           </ul>

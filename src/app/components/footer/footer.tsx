@@ -8,17 +8,17 @@ import SchenkLogo from "../../../../public/images/footer/schenk-logo.svg";
 const Footer = () => {
   return (
     <footer className="bg-light-purple text-white">
-      <div className="container flex flex-col py-12 gap-20 justify-between text-lg md:text-xl xl:flex-row">
+      <div className="container flex flex-col pt-[3.313rem] pb-[4.375rem] gap-20 justify-between text-lg md:text-xl xl:flex-row">
         {/* left side */}
-        <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-20">
+        <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-[5.438rem]">
           <div className="flex-1">
             <Image
               src={GraubnerLogo}
               width={260}
-              height={200}
+              height={53}
               alt="graubner-logo"
             />
-            <address className="not-italic leading-[1.55] my-4">
+            <address className="not-italic leading-[1.55] my-[1.288rem]">
               Graubner Projektentwicklung <br /> GmbH & Co. KG
               <br /> Schätzendorfer Straße 15 <br />
               21272 Egestorf
@@ -35,13 +35,13 @@ const Footer = () => {
           <div className="flex-1">
             <Image
               src={SchenkLogo}
-              width={330}
-              height={200}
+              width={404}
+              height={31}
               alt="schenk-logo"
               className="sm:h-[54px]"
             />
 
-            <address className="not-italic leading-[1.55] my-4">
+            <address className="not-italic leading-[1.55] my-[1.288rem]">
               Schenk Fleischhaker <br /> Architekten Partnerschaft mbB <br />
               Stahltwiete 19a
               <br /> 22761 Hamburg
@@ -58,7 +58,7 @@ const Footer = () => {
 
         {/* right side */}
         <div className="flex flex-col gap-8 xl:justify-between xl:items-end">
-          <Image src={FooterLogo} width={330} height={200} alt="footer-logo" />
+          <Image src={FooterLogo} width={334} height={94} alt="footer-logo" />
 
           <div>
             <Link

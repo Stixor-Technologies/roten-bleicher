@@ -52,7 +52,11 @@ const DetailSection = () => {
   );
 
   return (
-    <section ref={marqueContainer} className="py-[5.8vw] detail">
+    <section
+      id="details"
+      ref={marqueContainer}
+      className="py-10 md:py-[6.2vw] detail"
+    >
       {/* slider marque */}
 
       <div className="bg-red py-7 overflow-hidden md:py-[4.75rem]">
@@ -62,7 +66,7 @@ const DetailSection = () => {
               key={marqueItem}
               className="marque-item flex-[0_0_33%] relative text-center text-[2.61vw] px-2 md:px-[0.938rem]"
             >
-              <div className="border border-light-purple py-2 px-4 md:py-4 md:px-8 text-light-purple ">
+              <div className="border border-light-purple py-2 px-4 md:py-[1.438rem] md:px-8 text-light-purple ">
                 {marqueItem}
               </div>
             </li>
@@ -71,7 +75,7 @@ const DetailSection = () => {
       </div>
 
       <div className="flex flex-col md:flex-row gap-12 md:gap-0">
-        <div className="flex md:w-[55%] relative">
+        <div className="flex md:w-[56.77%] relative">
           <Image
             src={PhilosophyLanding}
             width={900}
@@ -81,8 +85,8 @@ const DetailSection = () => {
           />
         </div>
 
-        <div className="text-black flex-1 px-[1rem] md:px-7 lg:px-[8.1vw] md:pt-[10.42vw]">
-          <h3 className="font-area-extrabold md:text-[1.438rem] mb-3.5">
+        <div className="text-black flex-1 px-[1rem] md:px-7 lg:px-9 xl:px-[8.1vw] md:pt-[10.42vw]">
+          <h3 className="font-area-extrabold md:text-[1.438rem] mb-5">
             Architektur
           </h3>
           <p className="md:text-[1.375rem]">
@@ -94,8 +98,8 @@ const DetailSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-12 md:gap-0 mt-24 md:mt-[6.25rem]">
-        <div className="flex md:w-[55%] relative md:order-1">
+      <div className="flex flex-col md:flex-row gap-12 md:gap-0 mt-16 md:mt-[6.25rem]">
+        <div className="flex md:w-[56.77%] relative md:order-1">
           <Image
             src={PhilosophyLanding}
             width={900}
@@ -105,8 +109,8 @@ const DetailSection = () => {
           />
         </div>
 
-        <div className="text-black flex-1 px-[1rem] md:px-7 lg:px-[8.1vw] md:pt-[10.42vw] md:order-0">
-          <h3 className="font-area-extrabold md:text-[1.438rem] mb-3.5">
+        <div className="text-black flex-1 px-[1rem] md:px-7 lg:pl-[4rem] xl:pl-[8.68rem] lg:px-9 xl:pr-[8.1vw] md:pt-[10.42vw] md:order-0">
+          <h3 className="font-area-extrabold md:text-[1.438rem] mb-5">
             Ausstattung
           </h3>
           <p className="md:text-[1.375rem]">

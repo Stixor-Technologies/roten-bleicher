@@ -113,13 +113,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-red py-[4.85vw]">
+    <section id="kontakt" className="bg-red py-12 md:py-[4.85vw]">
       <div className="container">
         <h3 className="font-area-extrabold md:text-[1.438rem] mb-[0.678rem] text-light-purple">
           Kontakt
         </h3>
 
-        <div className=" cursor-pointer flex justify-between items-start">
+        <div className=" cursor-pointer flex justify-between items-start gap-7">
           <p className="flex flex-col font-area-thin text-white text-[clamp(1rem,2.4vw,2.813rem)]">
             <span>
               Sie haben Fragen zu unserem Projekt, oder sind interessiert?
@@ -132,9 +132,10 @@ const Contact = () => {
             <Image
               onClick={expandForm}
               src={ArrowPurple}
-              width={62}
+              width={63}
               height={71}
               alt=""
+              className="w-[1.6rem] lg:w-[3rem] 2xl:w-[63px] -mt-2"
             />
           ) : (
             <Image
@@ -143,6 +144,7 @@ const Contact = () => {
               width={55}
               height={71}
               alt=""
+              className="w-[1.6rem] lg:w-[3rem] 2xl:w-[55px] -mt-2"
             />
           )}
         </div>
@@ -157,9 +159,9 @@ const Contact = () => {
               return (
                 <>
                   <Form>
-                    {/* <div className="grid grid-cols-1 gap-3 md:gap-[1vw] py-6 md:grid-cols-3 md:py-8 2xl:px-4"> */}
-                    <div className="flex md:py-8 2xl:px-4 gap-4">
-                      <div className="space-y-6 w-[33.5rem]">
+                    <div className="grid grid-cols-1 gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4">
+                      {/* <div className="flex flex-col md:py-8 2xl:px-4 gap-6"> */}
+                      <div className="space-y-6 md:max-w-[33.5rem]">
                         {formFields?.slice(0, 3)?.map((fieldName) => {
                           const typedFieldName =
                             fieldName as keyof typeof fieldTypes;
@@ -209,7 +211,7 @@ const Contact = () => {
                         })}
                       </div>
 
-                      <div className="md:ml-[1.938rem] flex flex-col justify-between flex-1">
+                      <div className="xl:ml-[1.938rem] mt-6 md:mt-7 xl:mt-0 flex flex-col justify-between flex-1 gap-10 md:col-span-2 xl:col-span-1">
                         {formFields?.slice(4, 5)?.map((fieldName) => {
                           const typedFieldName =
                             fieldName as keyof typeof fieldTypes;
@@ -259,9 +261,9 @@ const Contact = () => {
                             <Image
                               src={ArrowPurple}
                               width={60}
-                              height={62}
+                              height={52}
                               alt=""
-                              className="-rotate-90"
+                              className="-rotate-90 w-[1.6rem] 2xl:w-[53.4px]"
                             />
                             <span className="font-area-semibold text-2xl md:text-[2.5rem] tranition-all duration-300 text-light-purple group-hover:pl-2 ">
                               Senden

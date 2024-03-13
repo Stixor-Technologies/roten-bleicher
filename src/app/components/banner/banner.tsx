@@ -147,7 +147,7 @@ const Banner = () => {
   });
 
   return (
-    <>
+    <section id="banner" className="mb-20 md:mb-[9.23vw]">
       <section
         ref={overLappingPanel}
         className="panel h-screen bg-smoke-red relative flex items-center justify-center overflow-hidden"
@@ -195,7 +195,7 @@ const Banner = () => {
         </div>
         <Header />
       </section>
-    </>
+    </section>
   );
 };
 

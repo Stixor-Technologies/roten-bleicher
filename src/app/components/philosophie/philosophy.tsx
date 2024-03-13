@@ -31,7 +31,7 @@ const Philosophy = () => {
   });
 
   return (
-    <section className="container py-[9.23vw]">
+    <section id="unsere-philosophie" className="container pb-20 md:pb-[8.3vw]">
       <div className="flex relative">
         <Image
           src={PhilosophyLanding}

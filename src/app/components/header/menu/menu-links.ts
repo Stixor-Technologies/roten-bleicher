@@ -1,31 +1,31 @@
 export const menuLinks = [
   {
     name: "Unsere Philosophie",
-    id: "hero",
+    id: "#unsere-philosophie",
   },
 
   {
     name: "Das Objekt",
-    id: "hero",
+    id: "#das-objekt",
   },
 
   {
     name: "Details",
-    id: "hero",
+    id: "#details",
   },
 
   {
     name: "Grundrisse",
-    id: "hero",
+    id: "#gundrisse",
   },
 
   {
     name: "Die Lage",
-    id: "hero",
+    id: "#die-lage",
   },
 
   {
     name: "Kontakt",
-    id: "hero",
+    id: "#kontakt",
   },
 ];

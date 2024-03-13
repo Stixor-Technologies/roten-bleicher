@@ -14,7 +14,7 @@ const DasObjekt = () => {
   const sliderImages = [PhilosophyLanding, Das2, Das3];
 
   return (
-    <section className="">
+    <section id="das-objekt" className="">
       <div className="flex items-center gap-10 mb-[5.22vw]">
         <Swiper
           pagination={{
@@ -34,7 +34,7 @@ const DasObjekt = () => {
               direction: "vertical",
             },
           }}
-          className="mySwiper mb-3 !ml-0 w-full h-[50vh] lg:aspect-video lg:max-h-[90vh] lg:h-full !flex !items-center flex-col lg:flex-row"
+          className="mySwiper w-full h-[50vh] lg:aspect-video lg:max-h-[891px] lg:h-full !flex !items-center flex-col lg:flex-row"
         >
           {sliderImages?.map((imageSrc, index) => (
             <SwiperSlide key={index}>
@@ -60,8 +60,8 @@ const DasObjekt = () => {
           Schöner leben im Roten Feld.
         </h4>
 
-        <p className="xl:w-[53vw] lg:flex gap-0 ml-auto lg:gap-8 py-[4.75vw]">
-          <span className="text-[clamp(1rem,1vw,1.375rem)]  text-black">
+        <p className="xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 py-10 md:py-[4.75vw]">
+          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)]  text-black">
             Das Gebäudeensemble besteht aus einem linearen Baukörper, der sich
             entlang der Willy-Brandt-Straße positioniert sowie einem
             freiste-henden Punkthaus auf der lärmabge-wandten Seite am
@@ -73,7 +73,7 @@ const DasObjekt = () => {
             ausreichend Spiel-raum für durchgrünte Außenräume und Kinder-
           </span>
 
-          <span className="text-[clamp(1rem,1vw,1.375rem)] text-black">
+          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)] text-black">
             spielflächen bietet. Es entstehen insgesamt 71 Wohnungen mit 1 bis 5
             Zimmern; 30% sind miet-preisgebunden. Mauris id ante lectus. Nunc
             non lectus vel massa auctor dapibus. Sed convallis viverra lorem.

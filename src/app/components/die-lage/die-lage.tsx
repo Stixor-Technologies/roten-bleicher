@@ -149,24 +149,24 @@ const DieLage = () => {
 
       // sliders[0].play();
 
-      ScrollTrigger.create({
-        trigger: marqueContainer.current,
-        start: "top 60%", // Adjust this value as needed
-        onEnter: () => {
-          sliders[0].play();
-        },
-        onLeave: () => {
-          sliders[0].pause();
-        },
+      // ScrollTrigger.create({
+      //   trigger: marqueContainer.current,
+      //   start: "top 60%", // Adjust this value as needed
+      //   onEnter: () => {
+      //     sliders[0].play();
+      //   },
+      //   onLeave: () => {
+      //     sliders[0].pause();
+      //   },
 
-        onEnterBack: () => {
-          sliders[0].play();
-        },
+      //   onEnterBack: () => {
+      //     sliders[0].play();
+      //   },
 
-        onLeaveBack: () => {
-          sliders[0].pause();
-        },
-      });
+      //   onLeaveBack: () => {
+      //     sliders[0].pause();
+      //   },
+      // });
 
       let text = new SplitText(fadedText.current, { type: "chars" });
       let chars = text.chars;
@@ -189,12 +189,12 @@ const DieLage = () => {
   );
 
   return (
-    <section ref={marqueContainer} className="">
+    <section id="die-lage" ref={marqueContainer} className="">
       {/* slider marque */}
       <div className=" bg-light-purple">
         <ul
           ref={marqueRow}
-          className="flex relative overflow-hidden whitespace-nowrap pb-10 md:pb-[3.696rem] md:pt-[19vw]"
+          className="flex relative overflow-hidden whitespace-nowrap pt-20 pb-10 md:pb-[3.696rem] md:pt-[19vw]"
         >
           {marqueData?.map((marqueItem, index) => (
             <li
@@ -206,7 +206,7 @@ const DieLage = () => {
                 width={700}
                 height={200}
                 alt=""
-                className={`w-full`}
+                className={`w-full max-h-[3.715rem]`}
               />
             </li>
           ))}
@@ -232,12 +232,6 @@ const DieLage = () => {
               />
             </div>
           ))}
-
-          {/* <div className="w-[clamp(3rem,12vw,9.563rem)] space-y-8 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
-            <div className="h-[clamp(0.7rem,12vw,1.875rem)] bg-white" />
-            <div className="h-[clamp(0.7rem,12vw,1.875rem)] bg-white" />
-            <div className="h-[clamp(0.7rem,12vw,1.875rem)] bg-white" />
-          </div> */}
 
           <Image
             src={GroupLines}
@@ -301,7 +295,7 @@ const DieLage = () => {
             width={900}
             height={300}
             alt="map"
-            className="w-full mb-[12.5vw]"
+            className="w-full mb-16 md:mb-[12.5vw]"
           />
         </div>
       </div>

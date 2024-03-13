@@ -11,17 +11,17 @@
 
 .swiper-pagination {
   position: initial !important;
-  padding: 0px 2.5rem;
+  padding: 0px 2.7rem;
 }
 
 .swiper-pagination-bullet {
-  width: 3.32rem !important;
+  width: 3.36rem !important;
   height: 0.5rem !important;
   border-radius: 0 !important;
   background-color: #bab2ff !important;
   opacity: 1 !important;
-  margin-top: 1.688rem !important;
-  margin-bottom: 1.688rem !important;
+  margin-top: 1.643rem !important;
+  margin-bottom: 1.643rem !important;
 }
 
 .swiper-pagination-bullet-active {
