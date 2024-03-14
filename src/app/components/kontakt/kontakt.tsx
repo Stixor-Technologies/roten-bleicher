@@ -163,7 +163,7 @@ const Contact = () => {
                   <Form>
                     {/* <div className="grid grid-cols-1 gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4"> */}
                     <div className="flex flex-col gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 xl:flex-row md:py-8 xl:gap-12">
-                      <div className="flex flex-col gap-[1.25rem] md:gap-4 md:flex-row max-w-[68rem] flex-1">
+                      <div className="flex flex-col gap-[1.25rem] md:gap-[1.063rem] md:flex-row max-w-[68rem] flex-1">
                         <div className="flex flex-col gap-[1.25rem] flex-1 justify-between">
                           {formFields?.slice(0, 3)?.map((fieldName) => {
                             const typedFieldName =
@@ -256,10 +256,10 @@ const Contact = () => {
                           }
                         })}
 
-                        <div>
+                        <>
                           <button
                             type="submit"
-                            className={`group mt-7.5 inline-flex items-center gap-4`}
+                            className={`group mt-7.5 inline-flex items-center gap-4 xl:-ml-[0.438rem]`}
                             disabled={loading}
                           >
                             <Image
@@ -280,7 +280,7 @@ const Contact = () => {
                               {toastMessage}
                             </div>
                           )}
-                        </div>
+                        </>
                       </div>
                     </div>
                   </Form>

@@ -260,7 +260,7 @@ const FAQ = () => {
             Grundrisse
           </h3>
 
-          <p className="text-white md:text-[1.563rem] flex-1">
+          <p className="text-white font-area-thin md:text-[1.563rem] flex-1 2xl:leading-[2.656rem]">
             Morbi aliquam, neque eu commodo blandit, odio ipsum facilisis sem,
             ut rutrum augue sapien ut velit. Maecenas semper dignissim
             porttitor. Phasellus viverra, turpis id imperdiet commodo, augue

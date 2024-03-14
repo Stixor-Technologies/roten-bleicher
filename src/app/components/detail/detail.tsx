@@ -96,7 +96,7 @@ const DetailSection = () => {
           <h3 className="font-area-extrabold md:text-[1.438rem] mb-5">
             Architektur
           </h3>
-          <p className="md:text-[1.375rem]">
+          <p className="md:text-[1.375rem] 2xl:leading-[1.969rem]">
             Duis molestie placerat tellus vel convallis. Quisque et mi dictum,
             condimentum magna vitae, vulputate nisi. Mauris id ante lectus. Nunc
             non lectus vel massa auctor dapibus. Sed convallis viverra lorem.
@@ -120,7 +120,7 @@ const DetailSection = () => {
           <h3 className="font-area-extrabold md:text-[1.438rem] mb-5">
             Ausstattung
           </h3>
-          <p className="md:text-[1.375rem]">
+          <p className="md:text-[1.375rem] 2xl:leading-[1.978rem]">
             Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu
             elementum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus
             tincidunt felis quis arcu finibus, nec consequat metus interdum.
