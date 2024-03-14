@@ -66,14 +66,20 @@ const DetailSection = () => {
     <section id="details" ref={setRefs} className="pb-10 md:pb-[9.02vw] detail">
       {/* slider marque */}
 
-      <div className="bg-red py-7 overflow-hidden md:py-[4.75rem]">
+      <div className="bg-red py-7 overflow-hidden md:py-[2.375rem] lg:py-[4.75rem]">
         <ul ref={marqueRow} className="flex relative whitespace-nowrap">
           {marqueData?.map((marqueItem) => (
+            // <li
+            //   key={marqueItem}
+            //   className="marque-item flex-[0_0_33%] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem]"
+            // >
+
             <li
               key={marqueItem}
-              className="marque-item flex-[0_0_33%] relative text-center text-[2.61vw] px-2 md:px-[0.938rem]"
+              className="marque-item flex-[0_0_33%] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem]"
             >
-              <div className="border border-light-purple py-2 px-4 md:py-[1.438rem] md:px-8 text-light-purple ">
+              {/* marque-item flex-[0_0_33%] relative text-center text-[2.61vw] px-2 md:px-[0.938rem] */}
+              <div className="border border-light-purple py-2 px-4 md:py-[3.06rem] md:px-8 text-light-purple ">
                 {marqueItem}
               </div>
             </li>
@@ -93,10 +99,10 @@ const DetailSection = () => {
         </div>
 
         <div className="text-black flex-1 px-[1rem] md:px-7 lg:px-9 xl:px-[8.1vw] md:pt-[10.42vw]">
-          <h3 className="font-area-extrabold md:text-[1.438rem] mb-5">
+          <h3 className="font-area-extrabold md:text-[1.438rem] mb-3 md:mb-5">
             Architektur
           </h3>
-          <p className="md:text-[1.375rem] 2xl:leading-[1.969rem]">
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
             Duis molestie placerat tellus vel convallis. Quisque et mi dictum,
             condimentum magna vitae, vulputate nisi. Mauris id ante lectus. Nunc
             non lectus vel massa auctor dapibus. Sed convallis viverra lorem.
@@ -117,10 +123,10 @@ const DetailSection = () => {
         </div>
 
         <div className="text-black flex-1 px-[1rem] md:px-7 lg:pl-[4rem] xl:pl-[8.68rem] lg:px-9 xl:pr-[8.1vw] md:pt-[10.42vw] md:order-0">
-          <h3 className="font-area-extrabold md:text-[1.438rem] mb-5">
+          <h3 className="font-area-extrabold md:text-[1.438rem] mb-3 md:mb-5">
             Ausstattung
           </h3>
-          <p className="md:text-[1.375rem] 2xl:leading-[1.978rem]">
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.978rem]">
             Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu
             elementum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus
             tincidunt felis quis arcu finibus, nec consequat metus interdum.

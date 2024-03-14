@@ -28,7 +28,6 @@ const Philosophy = () => {
         start: "top 80%",
         end: "bottom 40%",
         scrub: 1,
-        // pin: true,
       },
     });
   });
@@ -49,8 +48,10 @@ const Philosophy = () => {
         />
       </div>
 
-      <div ref={fadedTextContainer} className="xl:w-[83.17%] mx-auto">
-        <h3 className="font-area-bold mb-[1.438rem] md:text-xl">Philosophie</h3>
+      <div ref={fadedTextContainer} className="lg:w-[83.17%] mx-auto">
+        <h3 className="font-area-bold mb-3 md:mb-[1.438rem] md:text-xl">
+          Philosophie
+        </h3>
 
         <p
           ref={fadedText}

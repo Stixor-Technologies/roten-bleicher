@@ -200,12 +200,12 @@ const DieLage = () => {
       <div className=" bg-light-purple">
         <ul
           ref={marqueRow}
-          className="flex relative overflow-hidden whitespace-nowrap pt-20 pb-10 md:pb-[3.696rem] md:pt-[14.424vw]"
+          className="flex relative overflow-hidden whitespace-nowrap py-8 md:pb-[3.696rem] md:pt-[14.424vw]"
         >
           {marqueData?.map((marqueItem, index) => (
             <li
               key={index}
-              className="image-marque-item flex-[0_0_170%] md:flex-[0_0_120%] relative text-center px-2 md:px-4"
+              className="image-marque-item flex-[0_0_250%] md:flex-[0_0_120%] relative text-center px-2 md:px-4"
             >
               <Image
                 src={marqueItem}
@@ -278,9 +278,9 @@ const DieLage = () => {
       </div>
 
       <div className="container">
-        <div className="xl:w-[83.17%] mx-auto">
-          <div ref={fadedTextContainer} className="mb-[8vw]">
-            <h3 className="font-area-bold mb-[1.438rem] md:text-xl">
+        <div className="lg:w-[83.17%] mx-auto">
+          <div ref={fadedTextContainer} className="mb-5 md:mb-[8vw]">
+            <h3 className="font-area-bold mb-3 md:mb-[1.438rem] md:text-xl">
               Die Lage
             </h3>
 

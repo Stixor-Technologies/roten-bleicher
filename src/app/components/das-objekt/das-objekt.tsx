@@ -55,15 +55,19 @@ const DasObjekt = () => {
         </Swiper>
       </div>
 
-      <div className="container">
-        <h3 className="text-xl font-area-bold mb-2 lg:mb-0">Das Objekt</h3>
+      <div className="container xl:max-w-full xl:px-0">
+        <div className="xl:container">
+          <h3 className="text-xl font-area-bold mb-2 lg:mb-0">Das Objekt</h3>
 
-        <h4 className="text-[clamp(2rem,5vw,5rem)] text-medium-purple">
-          Schöner leben im Roten Feld.
-        </h4>
+          <h4 className="text-[clamp(2rem,5vw,5rem)] text-medium-purple">
+            Schöner leben im Roten Feld.
+          </h4>
+        </div>
 
-        <p className="xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 py-10 md:pt-[4.75vw] md:pb-[13.8vw]">
-          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)]  text-black 2xl:leading-[2.159rem]">
+        {/*  */}
+
+        <p className="lg:w-[70vw] xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 pt-5 pb-10 md:pt-[4.75vw] md:pb-[13.8vw] lg:pr-[140px]">
+          <span className="inline-block mb-5 lg:mb-0 flex-1 text-[clamp(1rem,1.2vw,1.375rem)]  text-black 2xl:leading-[2.159rem]">
             Das Gebäudeensemble besteht aus einem linearen Baukörper, der sich
             entlang der Willy-Brandt-Straße positioniert sowie einem
             freiste-henden Punkthaus auf der lärmabge-wandten Seite am
@@ -75,7 +79,7 @@ const DasObjekt = () => {
             ausreichend Spiel-raum für durchgrünte Außenräume und Kinder-
           </span>
 
-          <span className="flex-1 text-[clamp(1rem,1.2vw,1.375rem)] text-black 2xl:leading-[2.159rem]">
+          <span className="inline-block flex-1 text-[clamp(1rem,1.2vw,1.375rem)] text-black 2xl:leading-[2.159rem]">
             spielflächen bietet. Es entstehen insgesamt 71 Wohnungen mit 1 bis 5
             Zimmern; 30% sind miet-preisgebunden. Mauris id ante lectus. Nunc
             non lectus vel massa auctor dapibus. Sed convallis viverra lorem.

@@ -13,6 +13,40 @@ import Header from "../header/header";
 const Banner = () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // const b2Images = [
+  //   {
+  //     imgSrc: Erkenbar,
+  //     styles: "max-w-[55rem] w-full",
+  //   },
+
+  //   {
+  //     imgSrc: Effizient,
+  //     styles: "max-w-[20rem] sm:max-w-[32rem] md:max-w-[44rem] w-full",
+  //   },
+
+  //   {
+  //     imgSrc: Einheimisch,
+  //     styles: "max-w-[120rem] md:max-w-[58rem] w-full",
+  //   },
+  // ];
+
+  // const b2Images = [
+  //   {
+  //     imgSrc: Erkenbar,
+  //     styles: "max-w-[55rem] w-full",
+  //   },
+
+  //   {
+  //     imgSrc: Effizient,
+  //     styles: "max-w-[20rem] sm:max-w-[32rem] md:max-w-[44rem] w-full",
+  //   },
+
+  //   {
+  //     imgSrc: Einheimisch,
+  //     styles: "max-w-[120rem] md:max-w-[58rem] w-full",
+  //   },
+  // ];
+
   const b2Images = [
     {
       imgSrc: Erkenbar,
@@ -21,12 +55,12 @@ const Banner = () => {
 
     {
       imgSrc: Effizient,
-      styles: "max-w-[44rem] w-full",
+      styles: "max-w-[26rem] sm:max-w-[32rem] md:max-w-[44rem] w-full",
     },
 
     {
       imgSrc: Einheimisch,
-      styles: "max-w-[58rem] w-full",
+      styles: "max-w-[120rem] md:max-w-[58rem] w-full",
     },
   ];
 
@@ -175,7 +209,7 @@ const Banner = () => {
           ref={sliderContainer}
           className="h-screen bg-light-purple relative top-0 left-0 w-full flex items-center justify-center px-[1rem] sm:px-[2rem] z-20"
         >
-          <div className="w-full h-[210px] flex items-center justify-center md:px-0 relative">
+          <div className="w-full h-[80px] lg:[210px] flex items-center justify-center md:px-0 relative">
             {b2Images.map((image, index) => (
               <div className={`${image.styles} h-full absolute`}>
                 <div

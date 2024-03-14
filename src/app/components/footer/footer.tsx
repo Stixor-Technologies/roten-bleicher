@@ -8,9 +8,9 @@ import SchenkLogo from "../../../../public/images/footer/schenk-logo.svg";
 const Footer = () => {
   return (
     <footer className="bg-light-purple text-white">
-      <div className="container flex flex-col pt-[3.313rem] pb-[3.875rem] gap-20 justify-between text-lg md:text-xl xl:flex-row">
+      <div className="container flex flex-col py-8 md:pt-[3.313rem] md:pb-[3.875rem] gap-8 sm:gap-14 justify-between text-lg md:text-xl midxl:flex-row">
         {/* left side */}
-        <div className="flex flex-col font-area-thin gap-12 sm:flex-row lg:gap-[5.438rem] xl:max-w-[47.5rem]">
+        <div className="flex flex-col font-area-thin gap-9 sm:flex-row lg:gap-[5.438rem] xl:max-w-[47.5rem]">
           <div className="flex-1 xl:flex-initial xl:w-[20.438rem]">
             <Image
               src={GraubnerLogo}
@@ -18,7 +18,7 @@ const Footer = () => {
               height={53}
               alt="graubner-logo"
             />
-            <address className="not-italic leading-[1.55] my-[1.288rem]">
+            <address className="not-italic leading-[1.55] my-2.5 md:my-[1.288rem]">
               Graubner Projektentwicklung <br /> GmbH & Co. KG
               <br /> Schätzendorfer Straße 15 <br />
               21272 Egestorf
@@ -41,7 +41,7 @@ const Footer = () => {
               className="sm:h-[54px] object-contain"
             />
 
-            <address className="not-italic leading-[1.55] my-[1.288rem]">
+            <address className="not-italic leading-[1.55] my-2.5 md:my-[1.288rem]">
               Schenk Fleischhaker <br /> Architekten Partnerschaft mbB <br />
               Stahltwiete 19a
               <br /> 22761 Hamburg
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         {/* right side */}
-        <div className="flex flex-col xl:justify-between xl:items-end font-area-thin gap-10 xl:self-center xl:gap-[7.063rem]">
+        <div className="flex flex-col midxl:justify-between midxl:items-end font-area-thin gap-[1.288rem] md:gap-10 xl:self-center xl:gap-[7.063rem]">
           <Image src={FooterLogo} width={334} height={94} alt="footer-logo" />
 
           <div>

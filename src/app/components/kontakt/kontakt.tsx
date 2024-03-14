@@ -57,7 +57,7 @@ const Contact = () => {
     if (!isFormActive) {
       gsap.to(formRef.current, {
         height: "auto",
-        marginTop: "40px",
+        marginTop: `${window.innerWidth >= 1024 ? "40px" : "20px"}`,
         duration: 0.4,
       });
     } else {
@@ -115,7 +115,7 @@ const Contact = () => {
   };
 
   return (
-    <section ref={ref} id="kontakt" className="bg-red py-12 md:py-[4.85vw]">
+    <section ref={ref} id="kontakt" className="bg-red py-6 md:py-[4.85vw]">
       <div className="container 2xl:my-2">
         <h3 className="font-area-extrabold md:text-[1.438rem] mb-[0.678rem] text-light-purple">
           Kontakt
@@ -162,8 +162,8 @@ const Contact = () => {
                 <>
                   <Form>
                     {/* <div className="grid grid-cols-1 gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4"> */}
-                    <div className="flex flex-col gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 xl:flex-row md:py-8 xl:gap-12">
-                      <div className="flex flex-col gap-[1.25rem] md:gap-[1.063rem] md:flex-row max-w-[68rem] flex-1">
+                    <div className="flex flex-col gap-6 md:gap-6 pt-4 pb-0 md:grid-cols-2 xl:grid-cols-3 xl:flex-row md:py-8 xl:gap-12">
+                      <div className="flex flex-col gap-[1.25rem] md:gap-[1.063rem] sm:flex-row max-w-[68rem] flex-1">
                         <div className="flex flex-col gap-[1.25rem] flex-1 justify-between">
                           {formFields?.slice(0, 3)?.map((fieldName) => {
                             const typedFieldName =
@@ -172,7 +172,7 @@ const Contact = () => {
                               <div key={fieldName}>
                                 <Field
                                   name={fieldName}
-                                  className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent focus:outline-none text-xl placeholder:text-xl md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
+                                  className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[50px] md:h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent focus:outline-none text-base placeholder:text-base md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
                                   placeholder={placeholders[typedFieldName]}
                                 />
 
@@ -199,12 +199,12 @@ const Contact = () => {
                                     key={fieldName}
                                     as="textarea"
                                     name={fieldName}
-                                    className={`w-full h-full border border-light-purple px-4 py-4 text-dark-purple placeholder-light-purple placeholder:font-area-thin focus:outline-none bg-transparent resize-none text-xl placeholder:text-xl md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
+                                    className={`w-full h-full border border-light-purple px-4 py-4 text-dark-purple placeholder-light-purple placeholder:font-area-thin focus:outline-none bg-transparent resize-none text-base placeholder:text-base md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
                                     placeholder={placeholders[typedFieldName]}
                                     rows={6}
                                   />
                                   {touched.message && errors.message && (
-                                    <p className="text-xs mt-2 italic text-dark-purple">
+                                    <p className="text-xs mt-1 italic text-dark-purple">
                                       {errors.message as string}
                                     </p>
                                   )}
@@ -215,7 +215,7 @@ const Contact = () => {
                         </div>
                       </div>
                       {/* xl:ml-[1.938rem]  */}
-                      <div className="mt-6 md:mt-7 xl:mt-0 flex flex-col justify-between flex-1 xl:max-w-[18.125rem] 2xl:max-w-[31.5rem]  gap-10 md:col-span-2 xl:col-span-1">
+                      <div className="flex flex-col justify-between flex-1 xl:max-w-[18.125rem] 2xl:max-w-[31.5rem] gap-5 md:col-span-2 xl:col-span-1">
                         {formFields?.slice(4, 5)?.map((fieldName) => {
                           const typedFieldName =
                             fieldName as keyof typeof fieldTypes;
@@ -245,7 +245,7 @@ const Contact = () => {
                                     </label>
 
                                     {touched.terms && errors.terms && (
-                                      <p className="text-xs italic text-dark-purple mt-4">
+                                      <p className="text-xs italic text-dark-purple mt-2 md:mt-4">
                                         {errors.terms as string}
                                       </p>
                                     )}
@@ -272,7 +272,11 @@ const Contact = () => {
                             <span className="font-area-semibold text-2xl md:text-[2.5rem] tranition-all duration-300 text-light-purple group-hover:pl-2 ">
                               Senden
                             </span>
-                            {loading && <Spinner width="w-7" height="h-7" />}
+                            {loading && (
+                              <div>
+                                <Spinner width="w-7" height="h-7" />
+                              </div>
+                            )}
                           </button>
 
                           {showToast && (

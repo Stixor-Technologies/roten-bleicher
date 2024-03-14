@@ -105,7 +105,8 @@ const FaqItem = ({
     if (!isActive) {
       gsap.to(answerRef.current, {
         height: "auto",
-        marginTop: "63px",
+        marginTop: `${window.innerWidth >= 1024 ? "63px" : "32px"}`,
+        // marginTop: "63px",
         marginBottom: "30px",
         duration: 0.4,
       });
@@ -157,25 +158,25 @@ const FaqItem = ({
   return (
     <div className={` border-b-[1px] border-b-white py-4`}>
       <div
-        className="group flex items-center gap-8 relative cursor-pointer"
+        className="group flex items-center justify-between gap-8 relative cursor-pointer"
         onClick={questionClicked}
       >
         <span
-          className={`text-[2rem] md:text-[4.375rem] flex-1 md:flex-initial max-w-[34.688rem] w-full text-dark-purple inline-block group-hover:text-red transition-all ease-in-out duration-300 ${
+          className={`text-[1.75rem] md:[1.25rem] lg:text-[4.375rem] flex-initial max-w-[255px] lg:max-w-[34.688rem] w-full text-dark-purple inline-block group-hover:text-red transition-all ease-in-out duration-300 ${
             isActive && "text-red"
           }`}
         >
           {faqItem?.question}
         </span>
 
-        <div className="md:flex-1 flex justify-between relative">
+        <div className="lg:flex-1 flex lg:justify-between relative">
           {!isActive && (
             <Image
               src={PlusIcon}
               width={44}
               height={44}
               alt="expand-answer-icon"
-              className="opacity-100 group-hover:opacity-100 transition-all ease-in-out duration-300 w-[2rem] md:w-auto max-w-[2.75rem]"
+              className="opacity-100 group-hover:opacity-100 transition-all ease-in-out duration-300 w-[1.75rem] lg:w-auto max-w-[2.75rem]"
             />
           )}
 
@@ -185,7 +186,7 @@ const FaqItem = ({
               width={72}
               height={72}
               alt="expand-answer-icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-[3rem] max-w-[4.5rem] md:w-auto"
+              className="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 w-[2.7rem] max-w-[4.5rem] lg:w-auto"
             />
           )}
         </div>
@@ -193,7 +194,7 @@ const FaqItem = ({
 
       <div
         ref={answerRef}
-        className="flex flex-col h-0 overflow-hidden gap-9 2xl:gap-[8.25rem] xl:flex-row"
+        className="flex flex-col h-0 overflow-hidden gap-4 sm:gap-9 2xl:gap-[8.25rem] xl:flex-row"
       >
         <div className="flex-1 md:text-xl md:-mb-2 max-w-[42.125rem]">
           <span className="text-white font-area-thin inline-block">
@@ -211,8 +212,8 @@ const FaqItem = ({
           </Link>
         </div>
 
-        <div className="flex-1 flex flex-col gap-9 2xl:gap-[8.25rem] sm:flex-row">
-          <div className="flex-1 lg:flex-initial flex flex-col justify-between gap-4 xl:gap-0 font-area-bold">
+        <div className="flex-1 flex flex-col gap-4 sm:gap-9 2xl:gap-[8.25rem] sm:flex-row">
+          <div className="flex-1 lg:flex-initial flex flex-col justify-between gap-2 sm:gap-4 xl:gap-0 font-area-bold">
             <div className="flex flex-col md:text-[1.438rem]">
               <span className="text-white">Etage</span>
               <span className="text-red">{faqItem.floor}</span>
@@ -256,11 +257,11 @@ const FAQ = () => {
     <section ref={ref} id="gundrisse" className="bg-light-purple mt-[1.938rem]">
       <div className="container py-10 md:py-[7.82vw]">
         <div className="flex flex-col justify-between lg:flex-row">
-          <h3 className="font-area-bold mb-6 md:text-[1.438rem] w-[41.99%]">
+          <h3 className="font-area-bold mb-3 md:mb-6 md:text-[1.438rem] w-[41.99%]">
             Grundrisse
           </h3>
 
-          <p className="text-white font-area-thin md:text-[1.563rem] flex-1 2xl:leading-[2.656rem]">
+          <p className="text-lg text-white font-area-thin md:text-[1.563rem] flex-1 2xl:leading-[2.656rem]">
             Morbi aliquam, neque eu commodo blandit, odio ipsum facilisis sem,
             ut rutrum augue sapien ut velit. Maecenas semper dignissim
             porttitor. Phasellus viverra, turpis id imperdiet commodo, augue
