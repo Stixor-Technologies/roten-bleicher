@@ -121,7 +121,7 @@ const Contact = () => {
           Kontakt
         </h3>
 
-        <div className=" cursor-pointer flex justify-between items-start gap-7">
+        <div className=" cursor-pointer flex justify-between items-start gap-7 relative">
           <p className="flex flex-col font-area-thin text-white text-[clamp(1rem,2.4vw,2.813rem)]">
             <span>
               Sie haben Fragen zu unserem Projekt, oder sind interessiert?
@@ -130,25 +130,29 @@ const Contact = () => {
             <span>Schreiben Sie uns gerne eine Nachricht!</span>
           </p>
 
-          {!isFormActive ? (
-            <Image
-              onClick={expandForm}
-              src={ArrowPurple}
-              width={63}
-              height={71}
-              alt=""
-              className="w-[1.6rem] lg:w-[3rem] 2xl:w-[62.8px] 2xl:h-[71.5px] -mt-2"
-            />
-          ) : (
-            <Image
-              onClick={expandForm}
-              src={CrossPurple}
-              width={80}
-              height={80}
-              alt=""
-              className="-mt-2 -mr-2 w-[2.5rem] max-w-[6rem] lg:w-auto 2xl:w-full"
-            />
-          )}
+          <div className="relative">
+            {!isFormActive && (
+              <Image
+                onClick={expandForm}
+                src={ArrowPurple}
+                width={63}
+                height={71}
+                alt=""
+                className="opacity-100 group-hover:opacity-100 transition-all ease-in-out duration-300 w-[1.75rem] lg:w-auto max-w-[2.75rem]"
+              />
+            )}
+
+            {isFormActive && (
+              <Image
+                onClick={expandForm}
+                src={CrossPurple}
+                width={63}
+                height={60}
+                alt=""
+                className="absolute right-0 w-[2.7rem] max-w-[4.5rem] -mr-2 lg:w-auto"
+              />
+            )}
+          </div>
         </div>
 
         <div ref={formRef} className="h-0 overflow-hidden">

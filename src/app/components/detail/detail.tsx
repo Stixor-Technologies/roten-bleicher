@@ -69,17 +69,11 @@ const DetailSection = () => {
       <div className="bg-red py-7 overflow-hidden md:py-[2.375rem] lg:py-[4.75rem]">
         <ul ref={marqueRow} className="flex relative whitespace-nowrap">
           {marqueData?.map((marqueItem) => (
-            // <li
-            //   key={marqueItem}
-            //   className="marque-item flex-[0_0_33%] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem]"
-            // >
-
             <li
               key={marqueItem}
               className="marque-item flex-[0_0_33%] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem]"
             >
-              {/* marque-item flex-[0_0_33%] relative text-center text-[2.61vw] px-2 md:px-[0.938rem] */}
-              <div className="border border-light-purple py-2 px-4 md:py-[3.06rem] md:px-8 text-light-purple ">
+              <div className="border border-light-purple px-4  py-[1rem] sm:py-[1.46rem] lg:py-[2rem] xl:py-[3.06rem] md:px-8 text-light-purple ">
                 {marqueItem}
               </div>
             </li>

@@ -2,6 +2,9 @@ import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
+  corePlugins: {
+    container: false,
+  },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,25 +14,6 @@ const config: Config = {
     screens: {
       midxl: { min: "1200px" },
       ...defaultTheme.screens,
-    },
-
-    container: {
-      screens: {
-        sm: "100%",
-        md: "100%",
-        lg: "100%",
-        xl: "1280px",
-        "2xl": "1536px",
-        "3xl": "1920px",
-      },
-
-      center: true,
-      padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        md: "4rem",
-        "3xl": "8.75rem",
-      },
     },
 
     extend: {
@@ -61,6 +45,41 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // @ts-ignore
+    function ({ addComponents }) {
+      addComponents({
+        ".container": {
+          width: "100%",
+          paddingLeft: "1rem",
+          paddingRight: "1rem",
+          marginLeft: "auto",
+          marginRight: "auto",
+          "@screen sm": {
+            maxWidth: "100%",
+            paddingLeft: "2rem",
+            paddingRight: "2rem",
+          },
+          "@screen md": {
+            maxWidth: "100%",
+          },
+          "@screen lg": {
+            maxWidth: "100%",
+          },
+          "@screen xl": {
+            maxWidth: "1280px",
+          },
+          "@screen 2xl": {
+            maxWidth: "1536px",
+          },
+          "@screen 3xl": {
+            maxWidth: "1920px",
+            paddingLeft: "8.75rem",
+            paddingRight: "8.75rem",
+          },
+        },
+      });
+    },
+  ],
 };
 export default config;
