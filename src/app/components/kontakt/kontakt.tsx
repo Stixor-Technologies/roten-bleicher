@@ -143,10 +143,10 @@ const Contact = () => {
             <Image
               onClick={expandForm}
               src={CrossPurple}
-              width={55}
-              height={71}
+              width={80}
+              height={80}
               alt=""
-              className="w-[1.6rem] lg:w-[3rem] 2xl:w-[55px] -mt-2"
+              className="-mt-2 -mr-2 w-[2.5rem] max-w-[6rem] lg:w-auto 2xl:w-full"
             />
           )}
         </div>

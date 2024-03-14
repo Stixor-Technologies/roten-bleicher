@@ -182,10 +182,10 @@ const FaqItem = ({
           {isActive && (
             <Image
               src={CrossIcon}
-              width={30}
-              height={30}
+              width={72}
+              height={72}
               alt="expand-answer-icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-[2rem] lg:w-auto max-w-[2.5rem]"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-[3rem] max-w-[4.5rem] md:w-auto"
             />
           )}
         </div>
@@ -256,7 +256,7 @@ const FAQ = () => {
     <section ref={ref} id="gundrisse" className="bg-light-purple mt-[1.938rem]">
       <div className="container py-10 md:py-[7.82vw]">
         <div className="flex flex-col justify-between lg:flex-row">
-          <h3 className="font-area-bold mb-6 md:text-[1.438rem] w-[35%]">
+          <h3 className="font-area-bold mb-6 md:text-[1.438rem] w-[41.99%]">
             Grundrisse
           </h3>
 
