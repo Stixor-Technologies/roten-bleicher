@@ -161,59 +161,61 @@ const Contact = () => {
               return (
                 <>
                   <Form>
-                    <div className="grid grid-cols-1 gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4">
-                      {/* <div className="flex flex-col gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4"> */}
-                      <div className="space-y-6 md:max-w-[33.5rem] 2xl:w-[33.5rem]">
-                        {formFields?.slice(0, 3)?.map((fieldName) => {
-                          const typedFieldName =
-                            fieldName as keyof typeof fieldTypes;
-                          return (
-                            <div key={fieldName}>
-                              <Field
-                                name={fieldName}
-                                className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent placeholder:text-base focus:outline-none placeholder:text-[1.875rem] text-[1.875rem]`}
-                                placeholder={placeholders[typedFieldName]}
-                              />
-
-                              {touched[typedFieldName] &&
-                                errors[typedFieldName] && (
-                                  <p className="text-xs mt-2 italic text-dark-purple">
-                                    {errors[typedFieldName] as string}
-                                  </p>
-                                )}
-                            </div>
-                          );
-                        })}
-                      </div>
-
-                      <div className="max-h-[320px] md:max-w-[33.5rem] 2xl:w-[33.5rem] flex-1 2xl:flex-initial">
-                        {formFields?.slice(3, 4)?.map((fieldName) => {
-                          const typedFieldName =
-                            fieldName as keyof typeof fieldTypes;
-
-                          if (typedFieldName === "message") {
+                    {/* <div className="grid grid-cols-1 gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 md:py-8 2xl:px-4"> */}
+                    <div className="flex flex-col gap-6 md:gap-6 py-6 md:grid-cols-2 xl:grid-cols-3 xl:flex-row md:py-8 xl:gap-12">
+                      <div className="flex flex-col gap-[1.25rem] md:gap-4 md:flex-row max-w-[68rem] flex-1">
+                        <div className="flex flex-col gap-[1.25rem] flex-1 justify-between">
+                          {formFields?.slice(0, 3)?.map((fieldName) => {
+                            const typedFieldName =
+                              fieldName as keyof typeof fieldTypes;
                             return (
-                              <>
+                              <div key={fieldName}>
                                 <Field
-                                  key={fieldName}
-                                  as="textarea"
                                   name={fieldName}
-                                  className={`w-full h-full border border-light-purple px-4 py-4 text-dark-purple placeholder-light-purple placeholder:font-area-thin placeholder:text-base focus:outline-none bg-transparent resize-none placeholder:text-[1.875rem] text-[1.875rem]`}
+                                  className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent focus:outline-none text-xl placeholder:text-xl md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
                                   placeholder={placeholders[typedFieldName]}
-                                  rows={6}
                                 />
-                                {touched.message && errors.message && (
-                                  <p className="text-xs mt-2 italic text-dark-purple">
-                                    {errors.message as string}
-                                  </p>
-                                )}
-                              </>
-                            );
-                          }
-                        })}
-                      </div>
 
-                      <div className="xl:ml-[1.938rem] mt-6 md:mt-7 xl:mt-0 flex flex-col justify-between flex-1 gap-10 md:col-span-2 xl:col-span-1">
+                                {touched[typedFieldName] &&
+                                  errors[typedFieldName] && (
+                                    <p className="text-xs mt-2 italic text-dark-purple">
+                                      {errors[typedFieldName] as string}
+                                    </p>
+                                  )}
+                              </div>
+                            );
+                          })}
+                        </div>
+
+                        <div className="max-h-[19.688rem] flex-1 ">
+                          {formFields?.slice(3, 4)?.map((fieldName) => {
+                            const typedFieldName =
+                              fieldName as keyof typeof fieldTypes;
+
+                            if (typedFieldName === "message") {
+                              return (
+                                <>
+                                  <Field
+                                    key={fieldName}
+                                    as="textarea"
+                                    name={fieldName}
+                                    className={`w-full h-full border border-light-purple px-4 py-4 text-dark-purple placeholder-light-purple placeholder:font-area-thin focus:outline-none bg-transparent resize-none text-xl placeholder:text-xl md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
+                                    placeholder={placeholders[typedFieldName]}
+                                    rows={6}
+                                  />
+                                  {touched.message && errors.message && (
+                                    <p className="text-xs mt-2 italic text-dark-purple">
+                                      {errors.message as string}
+                                    </p>
+                                  )}
+                                </>
+                              );
+                            }
+                          })}
+                        </div>
+                      </div>
+                      {/* xl:ml-[1.938rem]  */}
+                      <div className="mt-6 md:mt-7 xl:mt-0 flex flex-col justify-between flex-1 xl:max-w-[18.125rem] 2xl:max-w-[31.5rem]  gap-10 md:col-span-2 xl:col-span-1">
                         {formFields?.slice(4, 5)?.map((fieldName) => {
                           const typedFieldName =
                             fieldName as keyof typeof fieldTypes;
