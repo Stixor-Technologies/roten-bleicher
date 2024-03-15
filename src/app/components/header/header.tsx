@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Hamburger from "./menu/hamburger";
 import Sidebar from "./menu/sidebar";
@@ -17,16 +17,19 @@ const Header = () => {
   const headerRef = useRef<HTMLDivElement | null>(null);
 
   const activeSection = useMenuStore((state) => state.activeSection);
-
-  useGSAP(() => {
-    ScrollTrigger.create({
-      trigger: headerRef.current,
-      start: `bottom ${headerRef?.current?.offsetHeight}px`,
-      end: "max",
-      pin: true,
-      pinSpacing: false,
-    });
-  });
+  useGSAP(
+    () => {
+      console.log(document.body.clientHeight);
+      ScrollTrigger.create({
+        trigger: headerRef.current,
+        start: `bottom ${headerRef?.current?.offsetHeight}px`,
+        endTrigger: "#footer",
+        pin: true,
+        pinSpacing: false,
+      });
+    },
+    { scope: headerRef },
+  );
 
   const scrollToSection = (targetSection: string) => {
     gsap.to(window, {
