@@ -79,8 +79,9 @@ const Contact = () => {
     try {
       setLoading(true);
       const emailTemplate = `<div>
-        <p>You've got a new mail from ${values.firstName} ${values.lastName}, their email is: ${values.email}</p>
-        ${values.message}</div>`;
+<p>New inquiry from: ${values.firstName} ${values.lastName} - ${values.email} </p>
+<p>Message: ${values.message} </p>
+</div>`;
       const res = await fetch("/api/contact", {
         headers: {
           "Content-Type": "application/json",
@@ -96,14 +97,14 @@ const Contact = () => {
       });
       const data = await res.json();
       if (data === 202) {
-        setToastMessage("Email has been sent");
+        setToastMessage("Die Email wurde verschickt");
         setShowToast(true);
         setTimeout(() => {
           setShowToast(false);
           formikHelpers.resetForm();
         }, 1000);
       } else {
-        setToastMessage(`Error: Error sending email`);
+        setToastMessage(`Fehler: Fehler beim Senden der E-Mail`);
         setShowToast(true);
         setTimeout(() => setShowToast(false), 1000);
       }
