@@ -66,8 +66,8 @@ const DasObjekt = () => {
 
         {/*  */}
 
-        <p className="lg:w-[70vw] xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 pt-5 pb-10 md:pt-[4.75vw] md:pb-[13.8vw] lg:pr-[140px]">
-          <span className="inline-block mb-5 lg:mb-0 flex-1 text-[clamp(1rem,1.2vw,1.375rem)]  text-black 2xl:leading-[2.159rem]">
+        <p className="lg:w-[70vw] xl:w-[56.67vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 pt-5 pb-10 md:pt-[4.75vw] md:pb-[13.8vw] lg:mr-[140px]">
+          <span className="inline-block mb-5 lg:mb-0 flex-1 text-[clamp(1rem,1.2vw,1.375rem)] text-black 2xl:leading-[2.159rem]">
             Das Gebäudeensemble besteht aus einem linearen Baukörper, der sich
             entlang der Willy-Brandt-Straße positioniert sowie einem
             freiste-henden Punkthaus auf der lärmabge-wandten Seite am

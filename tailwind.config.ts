@@ -14,6 +14,7 @@ const config: Config = {
     screens: {
       midxl: { min: "1200px" },
       ...defaultTheme.screens,
+      "min-aspect": { raw: "(min-aspect-ratio: 1/1)" },
     },
 
     extend: {

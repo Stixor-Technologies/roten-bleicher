@@ -109,9 +109,9 @@ const Sidebar = () => {
         <div className="absolute -z-10 h-full w-full bg-white"></div>
         <div
           className="mx-auto flex h-full w-full flex-col justify-center overflow-y-auto p-4 
-            min-aspect-9/16:w-3/4 min-aspect:mx-0 min-aspect:h-3/5 min-aspect:w-full min-aspect:justify-center"
+            "
         >
-          <ul className="space-y-[7vw] text-[7vw] px-8 md:text-left">
+          <ul className="space-y-[7vw] min-aspect:space-y-[3vw] text-[7vw] min-aspect:text-[3vw] px-8 md:text-left">
             {menuLinks.map((item, index) => (
               <li
                 className={`text-red font-area-bold w-max relative after:absolute after:-bottom-1 after:left-0 after:h-[0.041rem] after:w-0 after:bg-red after:transition-width after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full ${

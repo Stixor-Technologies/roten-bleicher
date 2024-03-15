@@ -195,7 +195,7 @@ const DieLage = () => {
   );
 
   return (
-    <section id="die-lage" ref={setRefs} className="">
+    <section id="die-lage" ref={setRefs} className="-mt-2">
       {/* slider marque */}
       <div className=" bg-light-purple">
         <ul
