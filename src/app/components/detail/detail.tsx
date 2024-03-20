@@ -1,6 +1,7 @@
 import React, { useCallback, useRef } from "react";
 import Image from "next/image";
-import PhilosophyLanding from "../../../../public/images/philosophie/c-philosophy-landing.png";
+import RB_Architektur from "../../../../public/images/architektur/rb_architektur.jpg";
+import RB_Ausstattung from "../../../../public/images/architektur/rb_ausstattung.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -84,7 +85,7 @@ const DetailSection = () => {
       <div className="flex flex-col md:flex-row gap-12 md:gap-0">
         <div className="flex md:w-[56.77%] relative">
           <Image
-            src={PhilosophyLanding}
+            src={RB_Architektur}
             width={900}
             height={200}
             alt=""
@@ -108,7 +109,7 @@ const DetailSection = () => {
       <div className="flex flex-col md:flex-row gap-12 md:gap-0 mt-16 md:mt-[6.25rem]">
         <div className="flex md:w-[56.77%] relative md:order-1">
           <Image
-            src={PhilosophyLanding}
+            src={RB_Ausstattung}
             width={900}
             height={200}
             alt=""
