@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/footer/footer";
+import Script from "next/script";
 
 const gibsonMedium = localFont({
   src: "./fonts/Gibson-Medium.otf",
@@ -54,7 +55,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          async
+          defer
+          src="https://cdn.feedbucket.app/assets/feedbucket.js"
+          data-feedbucket="eTRWsZavwweyAe0fW2y1"
+        ></Script>
+      </head>
       <body
         className={`${areaThin?.variable} ${areaLight?.variable} ${areaRegular?.variable} ${areaMedium?.variable} ${areaSemiBold?.variable} ${areaBold?.variable} ${areaExtraBold.variable} ${gibsonMedium.variable} font-area`}
       >
