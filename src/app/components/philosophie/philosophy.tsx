@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import PhilosophyLanding from "../../../../public/images/philosophie/philosophy-landing.png";
+import PhilosophyLanding from "../../../../public/images/philosophie/philosophy-landing.jpg";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
