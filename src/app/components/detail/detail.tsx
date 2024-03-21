@@ -86,16 +86,20 @@ const DetailSection = () => {
         <div className="flex md:w-[56.77%] relative">
           <Image
             src={RB_Architektur}
-            width={900}
-            height={200}
+            width={1090}
+            height={1090}
             alt=""
             className="w-full"
           />
         </div>
 
-        <div className="text-black flex-1 px-[1rem] md:px-7 lg:px-9 xl:px-[8.1vw] md:pt-[10.42vw]">
-          <h3 className="font-area-extrabold md:text-[1.438rem] mb-3 md:mb-5">
-            Architektur
+        <div className="text-black flex-1 px-[1rem] md:px-7 lg:px-9 xl:px-[8.1vw] md:pb-8 2xl:pb-0 md:pt-[6.64vw]">
+          <h3 className="text-xl font-area-bold mb-2 text-medium-purple lg:mb-1">
+            Das Objekt
+          </h3>
+
+          <h3 className="font-area-extrabold md:text-[1.375rem] md:mt-[4.72vw] mb-2.5  md:mb-[0.938rem]">
+            Passend zur historischen Umgebung: Die Architektur.
           </h3>
           <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
             Im Roten Feld findet sich viel schöne Architektur aus den Jahren von
@@ -106,7 +110,7 @@ const DetailSection = () => {
             eingesetzter Klinkerkunst.
           </p>
 
-          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-7">
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
             Entworfen vom Hamburger Architekturbüro Schenk Fleischhaker, das es
             versteht, gestalte- rische Qualität mit Ökologie und Nachhaltigkeit
             zu verbinden. Das extensiv begrünte Dach mit viel Platz für
@@ -121,24 +125,44 @@ const DetailSection = () => {
         <div className="flex md:w-[56.77%] relative md:order-1">
           <Image
             src={RB_Ausstattung}
-            width={900}
-            height={200}
+            width={1090}
+            height={1090}
             alt=""
-            className="w-full"
+            className="w-full object-cover"
           />
         </div>
 
-        <div className="text-black flex-1 px-[1rem] md:px-7 lg:pl-[4rem] xl:pl-[8.68rem] lg:px-9 xl:pr-[8.1vw] md:pt-[10.42vw] md:order-0">
+        <div className="text-black flex-1 px-[1rem] md:px-7 lg:pl-[4rem] lg:px-9 xl:pl-[8.68rem] xl:pr-[8.1vw] md:pt-[6.2vw] md:pb-8 2xl:pb-0 md:order-0">
           <h3 className="font-area-extrabold md:text-[1.438rem] mb-3 md:mb-5">
-            Ausstattung
+            Und eine Ausstattung, die nicht nur schön, sondern auch intelligent
+            ist.
           </h3>
-          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.978rem]">
-            Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu
-            elementum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus
-            tincidunt felis quis arcu finibus, nec consequat metus interdum.
-            Pellentesque quis mauris egestas, ullamcorper metus in, porttitor
-            nulla. Donec ornare, urna non lobortis ultricies, nunc quam sagittis
-            est, lacinia imperdiet ipsum magna eu.
+
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
+            Natürlich muss eine Ausstattung schön und kom-fortabel sein. Hier
+            aber will sie aber mehr. Nämlich auch intelligent und nachhaltig
+            sein. Dafür entspricht der ganze Bau KfW55 und ist an das
+            Fernwärmenetz von Lüneburg angeschlos-sen, das schon heute mehr
+            regenerative Ener-gien einsetzt als üblich – und bis 2030 frei von
+            CO2-Emissionen sein will.
+          </p>
+
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
+            Ähnlich nachhaltig, intelligent und sogar sparsam ist die
+            Warmwasserbereitung mittels eines Wärmetauschers in der Wohnung. Das
+            erspart Energieverluste im Haus und sorgt auch dafür, dass
+            Legionellen und andere gesundheitsschä-dliche Bakterien keine Chance
+            haben. Weil das Wasser in der Leitung immer die richtige Tem-peratur
+            hat, damit sie gar nicht erst entstehen.
+          </p>
+
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
+            Hier lebt es sich also gesund und stets komfor-tabel: Mit Aufzügen
+            in jedem Treppenhaus, Son-nenmarkisen nach Osten und Westen,
+            Eichen-holzparkett in den Wohnräumen, sorgsam aus-gewählten
+            Armaturen und Objekten und vielem mehr. Natürlich nicht von
+            irgendwelchen Her-stellern, sondern ausschließlich von bekannten und
+            bewährten Marken.
           </p>
         </div>
       </div>
