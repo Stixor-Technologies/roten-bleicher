@@ -4,6 +4,10 @@ import PhilosophyLanding from "../../../../public/images/philosophie/philosophy-
 import Das2 from "../../../../public/images/philosophie/das-2.avif";
 import Das3 from "../../../../public/images/philosophie/das-3.avif";
 
+import Slide1 from "../../../../public/images/das-objekt/das_slide1.jpg";
+import Slide2 from "../../../../public/images/das-objekt/das_slide2.jpg";
+import Slide3 from "../../../../public/images/das-objekt/das_slide3.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,7 +16,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import useSectionInView from "@/utils/useSectionInView";
 
 const DasObjekt = () => {
-  const sliderImages = [PhilosophyLanding, Das2, Das3];
+  const sliderImages = [Slide1, Slide2, Slide3];
   const { ref } = useSectionInView("#das-objekt");
 
   return (
@@ -40,9 +44,17 @@ const DasObjekt = () => {
         >
           {sliderImages?.map((imageSrc, index) => (
             <SwiperSlide key={index}>
-              <div className="relative mx-auto size-full overflow-hidden z-0">
+              <div
+                className={`relative mx-auto size-full overflow-hidden z-0 ${
+                  index === sliderImages.length - 1 && "bg-light-purple"
+                }`}
+              >
                 <Image
-                  className="absolute top-0 left-0 h-full w-full rounded-none object-cover z-10"
+                  className={`absolute top-0 left-0 h-full w-full rounded-none z-10 ${
+                    index === sliderImages.length - 1
+                      ? "object-contain"
+                      : "object-cover"
+                  } `}
                   src={imageSrc}
                   width={1536}
                   height={900}
@@ -57,10 +69,12 @@ const DasObjekt = () => {
 
       <div className="container xl:max-w-full xl:px-0">
         <div className="xl:container">
-          <h3 className="text-xl font-area-bold mb-2 lg:mb-0">Das Objekt</h3>
+          <h3 className="text-xl font-area-bold mb-2 text-medium-purple lg:mb-1">
+            Das Objekt
+          </h3>
 
-          <h4 className="text-[clamp(2rem,5vw,5rem)] text-medium-purple">
-            Schöner leben im Roten Feld.
+          <h4 className="text-[clamp(2rem,5vw,5rem)] leading-[1.1]">
+            Echte Nachbarschaft <br /> und hohe Lebensqualität.
           </h4>
         </div>
 

@@ -98,10 +98,21 @@ const DetailSection = () => {
             Architektur
           </h3>
           <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
-            Duis molestie placerat tellus vel convallis. Quisque et mi dictum,
-            condimentum magna vitae, vulputate nisi. Mauris id ante lectus. Nunc
-            non lectus vel massa auctor dapibus. Sed convallis viverra lorem.
-            Nam nec nisl tellus. Fusce consequat nisi.
+            Im Roten Feld findet sich viel schöne Architektur aus den Jahren von
+            1870 bis 1914, die dem Viertel seinen historischen Charakter gibt.
+            Das würdigt der Rotenbleicher unter anderem mit seiner Fas- sade und
+            einem ausgewählten Gestaltungsre- pertoire aus horizontalen
+            Gesimsbändern, zu- rückgesetzten Faschen sowie geschmackvoll
+            eingesetzter Klinkerkunst.
+          </p>
+
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-7">
+            Entworfen vom Hamburger Architekturbüro Schenk Fleischhaker, das es
+            versteht, gestalte- rische Qualität mit Ökologie und Nachhaltigkeit
+            zu verbinden. Das extensiv begrünte Dach mit viel Platz für
+            Photovoltaik und der regionale Klinker der Fassade, der seit 1888
+            von einem lokalen Familienunternehmen produziert wird, sind nur zwei
+            Beispiele dafür.
           </p>
         </div>
       </div>
