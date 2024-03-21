@@ -122,13 +122,12 @@ const Contact = () => {
           Kontakt
         </h3>
 
-        <div className=" cursor-pointer flex justify-between items-start gap-7 relative">
+        <div className=" cursor-pointer flex justify-between items-start gap-12 sm:gap-7 relative">
           <p className="flex flex-col font-area-thin text-white text-[clamp(1rem,2.4vw,2.813rem)]">
-            <span>
-              Sie haben Fragen zu unserem Projekt, oder sind interessiert?
-            </span>
+            <span>Ein schönes Zuhause im schönsten Lüneburg.</span>
 
-            <span>Schreiben Sie uns gerne eine Nachricht!</span>
+            <span>Sie wollen mehr wissen?</span>
+            <span>Schicken Sie uns gerne eine Nachricht.</span>
           </p>
 
           <div className="relative">
@@ -150,7 +149,7 @@ const Contact = () => {
                 width={63}
                 height={60}
                 alt=""
-                className="absolute right-0 w-[2.7rem] max-w-[4.5rem] -mr-2 lg:w-auto"
+                className="absolute right-0 w-[2.7rem] max-w-[4.5rem] -mr-2 -mt-2 lg:w-auto"
               />
             )}
           </div>
