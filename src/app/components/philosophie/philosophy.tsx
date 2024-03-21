@@ -15,7 +15,7 @@ const Philosophy = () => {
   const fadedTextContainer = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    let text = new SplitText(fadedText.current, { type: "words" });
+    const text = new SplitText(fadedText.current, { type: "words" });
     gsap.from(text.words, {
       stagger: 0.9,
       ease: "back-out",

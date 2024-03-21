@@ -174,13 +174,12 @@ const DieLage = () => {
         },
       });
 
-      let text = new SplitText(fadedText.current, { type: "chars" });
-      let chars = text.chars;
+      const text = new SplitText(fadedText.current, { type: "words" });
 
-      gsap.from(chars, {
-        stagger: 0.05,
+      gsap.from(text.words, {
+        stagger: 0.9,
         ease: "back-out",
-        duration: 0.5,
+        duration: 0.2,
         color: "#EAEAEA",
         scrollTrigger: {
           trigger: fadedTextContainer.current,
@@ -280,7 +279,7 @@ const DieLage = () => {
       <div className="container">
         <div className="lg:w-[83.17%] mx-auto">
           <div ref={fadedTextContainer} className="mb-5 md:mb-[8vw]">
-            <h3 className="font-area-bold mb-3 md:mb-[1.438rem] md:text-xl">
+            <h3 className="font-area-bold mb-3 md:mb-[1.438rem] text-medium-purple md:text-xl">
               Die Lage
             </h3>
 
@@ -288,15 +287,13 @@ const DieLage = () => {
               ref={fadedText}
               className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2x:leading-[4.1rem]"
             >
-              Nam nec magna quis nibh mollis euismod eget et lectus. Quisque
-              volutpat est non arcu pellentesque, ut bibendum magna consequat.
-              Aenean non finibus quam, ac aliquam tor-tor. Donec ac turpis
-              commodo, interdum neque vitae, dic-tum sapien. Curabitur sagittis
-              metus nec orci iaculis max-imus. Mauris leo magna, lobortis sed
-              tempus nec, sus-cipit eget velit. Suspendisse eget dictum eros,
-              nec iaculis augue. Vestibulum nec tempus ante. Integer semper
-              cursus orci, id dignissim nisl tincidunt sit amet. Orci varius
-              natoque.
+              Lüneburg ist schön. Im Roten Feld ist es am schönsten. Ein
+              Stadtteil wie das Rote Feld ist selten. Nicht nur in Lüne-burg,
+              sondern auch in Deutschland. Im Westen lockt der Kur-park als
+              grüne Oase und direkt daneben die Altstadt mit ihrer
+              Backsteingotik, den zahlreichen Giebelhäusern, dem Stint-markt und
+              dem berühmten antiken Kran, das beliebteste Fotomotiv im
+              historischen Hafen.
             </p>
           </div>
 
