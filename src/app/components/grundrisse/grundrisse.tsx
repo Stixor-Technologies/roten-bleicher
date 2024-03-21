@@ -257,21 +257,19 @@ const FAQ = () => {
     <section ref={ref} id="gundrisse" className="bg-light-purple mt-[1.938rem]">
       <div className="container py-10 md:py-[7.82vw]">
         <div className="flex flex-col justify-between lg:flex-row">
-          <h3 className="font-area-bold mb-3 md:mb-6 md:text-[1.438rem] w-[41.99%]">
+          <h3 className="font-area-bold mb-3 md:mb-6  md:text-[1.438rem] w-[41.99%]">
             Grundrisse
           </h3>
 
           <p className="text-lg text-white font-area-thin md:text-[1.563rem] flex-1 2xl:leading-[2.656rem]">
-            Morbi aliquam, neque eu commodo blandit, odio ipsum facilisis sem,
-            ut rutrum augue sapien ut velit. Maecenas semper dignissim
-            porttitor. Phasellus viverra, turpis id imperdiet commodo, augue
-            turpis tincidunt nisl, et pulvinar tellus tellus vel libero. Duis
-            hendrerit lacus et hendrerit auctor.
+            Die Grundrisse bieten viel Platz fürs Leben. Sogar in den Bädern und
+            auf den Balkonen, die nicht etwa kleinformatig, sondern großzügig
+            daherkommen.
           </p>
         </div>
 
         {/* faqs */}
-        <div className="mt-10 md:mt-[5.188rem] border-b-white border-t-[1px]">
+        <div className="mt-10 md:mt-[8.1vw] border-b-white border-t-[1px]">
           {faq.map((faqItem, index) => (
             <FaqItem
               id={index}
