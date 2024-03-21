@@ -15,13 +15,11 @@ const Philosophy = () => {
   const fadedTextContainer = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    let text = new SplitText(fadedText.current, { type: "chars" });
-    let chars = text.chars;
-
-    gsap.from(chars, {
-      stagger: 0.05,
+    let text = new SplitText(fadedText.current, { type: "words" });
+    gsap.from(text.words, {
+      stagger: 0.9,
       ease: "back-out",
-      duration: 0.5,
+      duration: 0.2,
       color: "#EAEAEA",
       scrollTrigger: {
         trigger: fadedTextContainer.current,
@@ -44,12 +42,12 @@ const Philosophy = () => {
           width={900}
           height={200}
           alt="philosophy-landing"
-          className="w-full mb-[13.3vw]"
+          className="w-full mb-[8.5vw]"
         />
       </div>
 
       <div ref={fadedTextContainer} className="lg:w-[83.17%] mx-auto">
-        <h3 className="font-area-bold mb-3 md:mb-[1.438rem] md:text-xl">
+        <h3 className="font-area-bold mb-3 md:mb-[1.438rem] md:text-xl text-medium-purple">
           Philosophie
         </h3>
 
@@ -57,14 +55,14 @@ const Philosophy = () => {
           ref={fadedText}
           className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[4.209rem]"
         >
-          Nahe der Innenstadt, unweit des Kurparks, gute Einkaufs-möglich-keiten
-          – der Lüneburger Stadtteil Rotes Feld gehört zu den attrak-tivsten
-          Wohngegenden der 1000-jährigen Han-sestadt. Hier ent-steht in den
-          nächsten Jahren ein Neubau mit 71 Wohnungen, des-sen moderne
-          Architektur sich sen-sibel in die Umgebung einfügt. Auch, weil der
-          Klinker seiner Fassade sorgsam ausgesucht ist und feinsinnig mit den
-          zahl-reichen denkmalgeschützten Gründer-zeitbauten des Quar-tiers an
-          der Ilmenau harmoniert.
+          Nicht so aufgeregt wie im nah gelegenen Hamburg, aber dafür viel
+          entspannter. Der Roten-bleicher lebt die zurück-gelehnte Lüneburger
+          Art mit jeder seiner 71 barrierearmen oder barrierefreien Wohnungen.
+          Nah genug an der Innen-stadt, um alle Möglichkeiten der 1000jährigen
+          Hansestadt zu genießen und weit genug entfernt, um sich davon zu
+          erholen. Im Rotenbleicher darf das Leben ruhig etwas lässiger,
+          unauf-geregter und gechillter sein. Weil genau das die schönste
+          Grundlage ist, um es in allen Zügen zu genießen.
         </p>
       </div>
     </section>

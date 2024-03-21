@@ -13,40 +13,6 @@ import Header from "../header/header";
 const Banner = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // const b2Images = [
-  //   {
-  //     imgSrc: Erkenbar,
-  //     styles: "max-w-[55rem] w-full",
-  //   },
-
-  //   {
-  //     imgSrc: Effizient,
-  //     styles: "max-w-[20rem] sm:max-w-[32rem] md:max-w-[44rem] w-full",
-  //   },
-
-  //   {
-  //     imgSrc: Einheimisch,
-  //     styles: "max-w-[120rem] md:max-w-[58rem] w-full",
-  //   },
-  // ];
-
-  // const b2Images = [
-  //   {
-  //     imgSrc: Erkenbar,
-  //     styles: "max-w-[55rem] w-full",
-  //   },
-
-  //   {
-  //     imgSrc: Effizient,
-  //     styles: "max-w-[20rem] sm:max-w-[32rem] md:max-w-[44rem] w-full",
-  //   },
-
-  //   {
-  //     imgSrc: Einheimisch,
-  //     styles: "max-w-[120rem] md:max-w-[58rem] w-full",
-  //   },
-  // ];
-
   const b2Images = [
     {
       imgSrc: Erkenbar,
