@@ -57,12 +57,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* <Script
+        <Script
           async
           defer
           src="https://cdn.feedbucket.app/assets/feedbucket.js"
           data-feedbucket="eTRWsZavwweyAe0fW2y1"
-        ></Script> */}
+        ></Script>
       </head>
       <body
         className={`${areaThin?.variable} ${areaLight?.variable} ${areaRegular?.variable} ${areaMedium?.variable} ${areaSemiBold?.variable} ${areaBold?.variable} ${areaExtraBold.variable} ${gibsonMedium.variable} font-area`}

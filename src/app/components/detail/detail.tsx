@@ -2,11 +2,10 @@ import React, { useCallback, useRef } from "react";
 import Image from "next/image";
 import RB_Architektur from "../../../../public/images/architektur/rb_architektur.jpg";
 import RB_Ausstattung from "../../../../public/images/architektur/rb_ausstattung.jpg";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { horizontalLoop } from "@/utils/horizontal-loop";
 import useSectionInView from "@/utils/useSectionInView";
+import Marquee from "react-fast-marquee";
 
 const DetailSection = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,55 +30,25 @@ const DetailSection = () => {
     "XX m2 Garten",
   ];
 
-  useGSAP(
-    () => {
-      const scrollingText: HTMLLIElement[] = gsap.utils.toArray(".marque-item");
-
-      const tl = horizontalLoop(scrollingText, {
-        repeat: -1,
-      });
-      tl.pause();
-
-      ScrollTrigger.create({
-        trigger: marqueRow.current,
-        start: "top bottom",
-        endTrigger: marqueContainer.current,
-
-        onEnter: () => {
-          tl.play();
-        },
-        onLeave: () => {
-          tl.pause();
-        },
-        onEnterBack: () => {
-          tl.play();
-        },
-
-        onLeaveBack: () => {
-          tl.pause();
-        },
-      });
-    },
-    { scope: marqueContainer },
-  );
-
   return (
     <section id="details" ref={setRefs} className="pb-10 md:pb-[9.02vw] detail">
       {/* slider marque */}
 
       <div className="bg-red py-7 overflow-hidden md:py-[2.375rem] lg:py-[4.75rem]">
-        <ul ref={marqueRow} className="flex relative whitespace-nowrap">
-          {marqueData?.map((marqueItem) => (
-            <li
-              key={marqueItem}
-              className="marque-item flex-[0_0_33%] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem]"
-            >
-              <div className="border border-light-purple px-4  py-[1rem] sm:py-[1.46rem] lg:py-[2rem] xl:py-[3.06rem] md:px-8 text-light-purple ">
-                {marqueItem}
-              </div>
-            </li>
-          ))}
-        </ul>
+        <Marquee speed={window.innerWidth >= 768 ? 110 : 90} autoFill loop={0}>
+          <ul ref={marqueRow} className="flex relative whitespace-nowrap">
+            {marqueData?.map((marqueItem) => (
+              <li
+                key={marqueItem}
+                className="marque-item flex w-[200px] sm:w-[250px] md:w-[350px] lg:w-[400px] xl:[536px] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
+              >
+                <div className="border flex-1 border-light-purple px-4  py-[1rem] sm:py-[1.46rem] lg:py-[2rem] xl:py-[3.06rem] md:px-8 text-light-purple ">
+                  {marqueItem}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Marquee>
       </div>
 
       <div className="flex flex-col md:flex-row gap-12 md:gap-0">
@@ -89,7 +58,7 @@ const DetailSection = () => {
             width={1090}
             height={1090}
             alt=""
-            className="w-full"
+            className="w-full object-cover"
           />
         </div>
 

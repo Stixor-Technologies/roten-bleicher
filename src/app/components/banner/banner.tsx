@@ -164,7 +164,7 @@ const Banner = () => {
             className="w-full max-w-[45rem]"
             priority
           />
-          <h2 className="text-white text-lg sm:text-4xl uppercase text-center font-gibson-medium mt-8 tracking-widest sm:mt-14">
+          <h2 className="text-white text-lg sm:text-3xl md:text-4xl uppercase text-right font-gibson-medium mt-8 tracking-widest sm:mt-14">
             ZUHAUSE IM ROTEN FELD <span className="font-area">-</span> LÜNEBURG
           </h2>
         </div>

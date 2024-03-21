@@ -10,6 +10,7 @@ import Map from "../../../../public//images/die-lage/map.png";
 
 import { horizontalLoop } from "@/utils/horizontal-loop";
 import useSectionInView from "@/utils/useSectionInView";
+import Marquee from "react-fast-marquee";
 
 const DieLage = () => {
   gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -61,35 +62,6 @@ const DieLage = () => {
 
   useGSAP(
     () => {
-      // animation for slider  marque
-      const scrollingText: HTMLLIElement[] =
-        gsap.utils.toArray(".image-marque-item");
-
-      const tl = horizontalLoop(scrollingText, {
-        repeat: -1,
-      });
-      tl.pause();
-
-      ScrollTrigger.create({
-        trigger: marqueRow.current,
-        start: "top bottom",
-        endTrigger: marqueContainer.current,
-
-        onEnter: () => {
-          tl.play();
-        },
-        onLeave: () => {
-          tl.pause();
-        },
-        onEnterBack: () => {
-          tl.play();
-        },
-
-        onLeaveBack: () => {
-          tl.pause();
-        },
-      });
-
       //animation sliders
       const createSlider = (element: HTMLElement, delay: number) => {
         const slides = Array.from(element.querySelectorAll("div"));
@@ -111,21 +83,11 @@ const DieLage = () => {
             // cycle through slide targets
             const prev = currentSlide;
             currentSlide = slideWrap(++currentIndex);
-            // gsap
-            //   .timeline({
-            //     // call the next slider to play
-            //     delay: 2.5,
-            //     onComplete: () => {
-            //       if (this.next) {
-            //         // Check if this.next is not null
-            //         this.next.play();
-            //       }
-            //     },
-            //   })
+
             tl = gsap
               .timeline({
                 // call the next slider to play
-                delay: 2.5,
+                delay: 1.5,
                 // onCom
                 onComplete: () => {
                   if (this.next) {
@@ -166,8 +128,6 @@ const DieLage = () => {
       sliders.forEach((slider, i) => {
         slider.next = sliderWrap(i + 1);
       });
-
-      // sliders[0].play();
 
       ScrollTrigger.create({
         trigger: marqueContainer.current,
@@ -211,26 +171,23 @@ const DieLage = () => {
     <section id="die-lage" ref={setRefs} className="-mt-2">
       {/* slider marque */}
       <div className=" bg-light-purple">
-        <ul
-          ref={marqueRow}
-          className="flex relative overflow-hidden whitespace-nowrap py-8 md:pb-[3.696rem] md:pt-[14.424vw]"
-        >
-          {marqueData?.map((marqueItem, index) => (
-            <li
+        <Marquee speed={window.innerWidth >= 768 ? 110 : 90} autoFill loop={0}>
+          {marqueData.map((imageUrl, index) => (
+            <div
               key={index}
-              className="image-marque-item flex-[0_0_250%] md:flex-[0_0_120%] relative text-center px-2 md:px-4"
+              className="flex flex-row py-8 md:pb-[3.696rem] md:pt-[14.424vw]"
             >
               <Image
-                src={marqueItem}
+                src={imageUrl}
+                alt=""
                 width={700}
                 height={200}
-                alt=""
-                className={`w-full max-h-[3.715rem]`}
+                className="w-full max-h-[2rem] sm:max-h-[2.2rem] md:max-h-[3.715rem] mx-7 cursor-pointer transition duration-300 ease-in-out"
                 priority
               />
-            </li>
+            </div>
           ))}
-        </ul>
+        </Marquee>
       </div>
 
       {/* sliders */}
@@ -312,8 +269,15 @@ const DieLage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row max-w-[93.875rem] w-full gap-16 2xl:gap-[8.03vw] mb-[17.92vw]">
-          <Image src={Map} width={812} height={1148} alt="map" priority />
+        <div className="flex flex-col xl:flex-row max-w-[93.875rem] w-full gap-16 2xl:gap-[8.03vw] mb-[17.92vw]">
+          <Image
+            src={Map}
+            width={812}
+            height={1148}
+            alt="map"
+            priority
+            className="w-full h-auto xl:max-h-[71.75rem]"
+          />
 
           <div className="flex flex-col justify-between">
             <div>
@@ -336,7 +300,7 @@ const DieLage = () => {
               </p>
             </div>
 
-            <ol className=" list-none font-area-semibold text-base space-y-2">
+            <ol className=" list-none font-area-semibold text-base space-y-2 mt-14">
               {steps.map((item, index) => (
                 <li className="space-x-4">
                   <span className=" text-medium-purple text-[1.438rem] font-area-extrabold">

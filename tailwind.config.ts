@@ -19,6 +19,7 @@ const config: Config = {
 
     extend: {
       screens: {
+        xxs: "381px",
         "3xl": "1920px",
       },
       backgroundImage: {

@@ -194,7 +194,7 @@ const FaqItem = ({
 
       <div
         ref={answerRef}
-        className="flex flex-col h-0 overflow-hidden gap-4 sm:gap-9 2xl:gap-[8.25rem] xl:flex-row"
+        className="flex flex-col h-0 overflow-hidden gap-6 sm:gap-9 2xl:gap-[8.25rem] xl:flex-row"
       >
         <div className="flex-1 md:text-xl md:-mb-2 max-w-[42.125rem]">
           <span className="text-white font-area-thin inline-block">
@@ -202,7 +202,7 @@ const FaqItem = ({
           </span>
           <Link
             href="#"
-            className="group mt-7.5 inline-flex items-center gap-4 self-center mt-6 md:mt-[2.875rem]"
+            className="hidden sm:inline-flex group mt-7.5 items-center gap-4 self-center mt-6 md:mt-[2.875rem]"
           >
             <Image src={ArrowRed} width={41} height={36} alt="" />
 
@@ -239,6 +239,17 @@ const FaqItem = ({
               className="w-full md:max-h-[220px]"
             />
           </div>
+
+          <Link
+            href="#"
+            className="inline-flex sm:hidden group mt-7.5 items-center gap-4 self-start mt-6 md:mt-[2.875rem]"
+          >
+            <Image src={ArrowRed} width={41} height={36} alt="" />
+
+            <span className="font-area-bold md:text-xl tranition-all duration-300 text-red group-hover:pl-2 ">
+              GRUNDRISS RUNTERLADEN
+            </span>
+          </Link>
         </div>
       </div>
     </div>
