@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import RB_Architektur from "../../../../public/images/architektur/rb_architektur.jpg";
 import RB_Ausstattung from "../../../../public/images/architektur/rb_ausstattung.jpg";
@@ -14,6 +14,18 @@ const DetailSection = () => {
   const marqueRow = useRef<HTMLUListElement | null>(null);
 
   const { ref } = useSectionInView("#details");
+
+  const [windowSize, setWindowSize] = useState<number>(0);
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   const setRefs = useCallback(
     (node: any) => {
@@ -35,7 +47,7 @@ const DetailSection = () => {
       {/* slider marque */}
 
       <div className="bg-red py-7 overflow-hidden md:py-[2.375rem] lg:py-[4.75rem]">
-        <Marquee speed={window.innerWidth >= 768 ? 110 : 90} autoFill loop={0}>
+        <Marquee speed={windowSize >= 768 ? 110 : 90} autoFill loop={0}>
           <ul ref={marqueRow} className="flex relative whitespace-nowrap">
             {marqueData?.map((marqueItem) => (
               <li

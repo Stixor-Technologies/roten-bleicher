@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -19,6 +19,19 @@ const DieLage = () => {
   const fadedText = useRef<HTMLParagraphElement | null>(null);
   const fadedTextContainer = useRef<HTMLDivElement | null>(null);
   const { ref } = useSectionInView("#die-lage");
+
+  const [windowSize, setWindowSize] = useState<number>(0);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   const setRefs = useCallback(
     (node: any) => {
@@ -171,7 +184,7 @@ const DieLage = () => {
     <section id="die-lage" ref={setRefs} className="-mt-2">
       {/* slider marque */}
       <div className=" bg-light-purple">
-        <Marquee speed={window.innerWidth >= 768 ? 110 : 90} autoFill loop={0}>
+        <Marquee speed={windowSize >= 768 ? 110 : 90} autoFill loop={0}>
           {marqueData.map((imageUrl, index) => (
             <div
               key={index}
