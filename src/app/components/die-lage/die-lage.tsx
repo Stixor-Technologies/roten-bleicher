@@ -45,6 +45,20 @@ const DieLage = () => {
     "/images/die-lage/slider-right/slider-right-4.png",
   ];
 
+  const steps = [
+    "SALZTHERME LÜNEBURG",
+    "STÄDTISCHES KLINIKUM",
+    "LEUPHANA UNIVERSITÄT",
+    "AUEBRUCHSHEIDE",
+    "OLYMPIC FITNESS LÜNEBURG",
+    "LÜNEBURG BAHNHOF",
+    "ALTER KRAN",
+    "RATHAUS LÜNEBURG",
+    "LÜNEBURG ALTSTADT",
+    "SÜLZWIESE",
+    "DEUTSCHES SALZMUSEUM",
+  ];
+
   useGSAP(
     () => {
       // animation for slider  marque
@@ -296,15 +310,43 @@ const DieLage = () => {
               historischen Hafen.
             </p>
           </div>
+        </div>
 
-          <Image
-            src={Map}
-            width={900}
-            height={300}
-            alt="map"
-            className="w-full mb-16 md:mb-[12.5vw]"
-            priority
-          />
+        <div className="flex flex-col lg:flex-row max-w-[93.875rem] w-full gap-16 2xl:gap-[8.03vw] mb-[17.92vw]">
+          <Image src={Map} width={812} height={1148} alt="map" priority />
+
+          <div className="flex flex-col justify-between">
+            <div>
+              <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
+                Begleitet von viel Natur, in Form des Kurparks und des
+                romantischen Flüsschens Ilmenau, die dem Roten Feld seinen
+                idyllischen Charme ver-leihen und viele Möglichkeiten bieten –
+                zur Erhol-ung und für abwechslungsreiche Spaziergänge. Auch an
+                den vielen gepflegten Altbauten vorbei, wie der
+                Wilhelm-Raabe-Schule, eine der besten Schulen der Stadt.
+              </p>
+
+              <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
+                Im Süden sorgt die Universität für viel quirliges Leben und
+                direkt daneben das Villenviertel Willschenbruch für eine
+                beruhigend-großbür-gerliche Atmosphäre. Und das Beste: Knappe
+                150 Meter vom Rotenbleicher, finden sich Supermär-kte, Ärzte und
+                alle Möglichkeiten. Hier ist nicht nur die Innenstadt vor der
+                Haustür, sondern auch alles für den täglichen Bedarf.
+              </p>
+            </div>
+
+            <ol className=" list-none font-area-semibold text-base space-y-2">
+              {steps.map((item, index) => (
+                <li className="space-x-4">
+                  <span className=" text-medium-purple text-[1.438rem] font-area-extrabold">
+                    {index + 1}
+                  </span>
+                  <span className=" font-area-semibold">{item}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </section>
