@@ -63,8 +63,8 @@ const DetailSection = () => {
         </Marquee>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-12 md:gap-0">
-        <div className="flex md:w-[56.77%] relative">
+      <div className="flex flex-col lg:flex-row gap-12 md:gap-0">
+        <div className="flex lg:w-[56.77%] relative">
           <Image
             src={RB_Architektur}
             width={1090}
@@ -102,8 +102,8 @@ const DetailSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-12 md:gap-0 mt-16 md:mt-[6.25rem]">
-        <div className="flex md:w-[56.77%] relative md:order-1">
+      <div className="flex flex-col lg:flex-row gap-12 md:gap-0 mt-16 md:mt-[6.25rem]">
+        <div className="flex lg:w-[56.77%] relative lg:order-1">
           <Image
             src={RB_Ausstattung}
             width={1090}
