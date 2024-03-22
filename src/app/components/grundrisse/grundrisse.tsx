@@ -265,7 +265,7 @@ const FAQ = () => {
   };
 
   return (
-    <section ref={ref} id="gundrisse" className="bg-light-purple mt-[1.938rem]">
+    <section ref={ref} id="gundrisse" className="bg-light-purple">
       <div className="container py-10 md:py-[7.82vw]">
         <div className="flex flex-col justify-between lg:flex-row">
           <h3 className="font-area-bold mb-3 md:mb-6  md:text-[1.438rem] w-[41.99%]">

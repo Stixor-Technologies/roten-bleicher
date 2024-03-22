@@ -43,7 +43,7 @@ const DetailSection = () => {
   ];
 
   return (
-    <section id="details" ref={setRefs} className="pb-10 md:pb-[9.02vw] detail">
+    <section id="details" ref={setRefs} className="pb-10 md:pb-[7.82vw] detail">
       {/* slider marque */}
 
       <div className="bg-red py-7 overflow-hidden md:py-[2.375rem] lg:py-[4.75rem]">
@@ -52,7 +52,7 @@ const DetailSection = () => {
             {marqueData?.map((marqueItem) => (
               <li
                 key={marqueItem}
-                className="marque-item flex w-[200px] sm:w-[250px] md:w-[350px] lg:w-[400px] xl:[536px] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
+                className="marque-item flex w-[200px] sm:w-[250px] md:w-[350px] lg:w-[400px] xl:w-[536px] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
               >
                 <div className="border flex-1 border-light-purple px-4  py-[1rem] sm:py-[1.46rem] lg:py-[2rem] xl:py-[3.06rem] md:px-8 text-light-purple ">
                   {marqueItem}
@@ -76,7 +76,7 @@ const DetailSection = () => {
 
         <div className="text-black flex-1 px-[1rem] md:px-7 lg:px-9 xl:px-[8.1vw] md:pb-8 2xl:pb-0 md:pt-[6.64vw]">
           <h3 className="text-xl font-area-bold mb-2 text-medium-purple lg:mb-1">
-            Das Objekt
+            Die Details
           </h3>
 
           <h3 className="font-area-extrabold md:text-[1.375rem] md:mt-[4.72vw] mb-2.5  md:mb-[0.938rem]">
