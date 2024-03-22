@@ -73,7 +73,7 @@ const DasObjekt = () => {
             Das Objekt
           </h3>
 
-          <h4 className="text-[clamp(2rem,5vw,5rem)] leading-[1.1]">
+          <h4 className="text-[clamp(2rem,5vw,5rem)] leading-[6rem]">
             Echte Nachbarschaft <br /> und hohe Lebensqualität.
           </h4>
         </div>

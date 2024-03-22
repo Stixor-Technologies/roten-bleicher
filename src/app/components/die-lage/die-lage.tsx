@@ -261,7 +261,7 @@ const DieLage = () => {
       </div>
 
       <div className="container">
-        <div className="lg:w-[83.17%] mx-auto">
+        <div className="max-w-[85.25rem] mx-auto">
           <div ref={fadedTextContainer} className="mb-5 md:mb-[8vw]">
             <h3 className="font-area-bold mb-3 md:mb-[1.438rem] text-medium-purple md:text-xl">
               Die Lage
@@ -269,7 +269,7 @@ const DieLage = () => {
 
             <p
               ref={fadedText}
-              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2x:leading-[4.1rem]"
+              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[3.79rem]"
             >
               Lüneburg ist schön. Im Roten Feld ist es am schönsten. Ein
               Stadtteil wie das Rote Feld ist selten. Nicht nur in Lüne-burg,
@@ -282,7 +282,7 @@ const DieLage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row max-w-[93.875rem] w-full gap-16 2xl:gap-[8.03vw] mb-[17.92vw]">
+        <div className="flex flex-col xl:flex-row max-w-[93.875rem] ml-auto w-full gap-16 2xl:gap-[8.03vw] mb-[17.92vw]">
           <Image
             src={Map}
             width={812}

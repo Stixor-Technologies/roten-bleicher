@@ -46,14 +46,14 @@ const Philosophy = () => {
         />
       </div>
 
-      <div ref={fadedTextContainer} className="lg:w-[83.17%] mx-auto">
+      <div ref={fadedTextContainer} className="max-w-[85.25rem] mx-auto">
         <h3 className="font-area-bold mb-3 md:mb-[1.438rem] md:text-xl text-medium-purple">
           Philosophie
         </h3>
 
         <p
           ref={fadedText}
-          className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[4.209rem]"
+          className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[3.79rem]"
         >
           Nicht so aufgeregt wie im nah gelegenen Hamburg, aber dafür viel
           entspannter. Der Roten-bleicher lebt die zurück-gelehnte Lüneburger
