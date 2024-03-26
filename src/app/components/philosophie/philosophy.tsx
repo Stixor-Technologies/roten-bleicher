@@ -56,13 +56,13 @@ const Philosophy = () => {
           className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[3.79rem]"
         >
           Nicht so aufgeregt wie im nah gelegenen Hamburg, aber dafür viel
-          entspannter. Der Roten-bleicher lebt die zurück-gelehnte Lüneburger
+          entspannter. Der Roten bleicher lebt die zurück gelehnte Lüneburger
           Art mit jeder seiner 71 barrierearmen oder barrierefreien Wohnungen.
-          Nah genug an der Innen-stadt, um alle Möglichkeiten der 1000jährigen
+          Nah genug an der Innen stadt, um alle Möglichkeiten der 1000jährigen
           Hansestadt zu genießen und weit genug entfernt, um sich davon zu
-          erholen. Im Rotenbleicher darf das Leben ruhig etwas lässiger,
-          unauf-geregter und gechillter sein. Weil genau das die schönste
-          Grundlage ist, um es in allen Zügen zu genießen.
+          erholen. Im Rotenbleicher darf das Leben ruhig etwas lässiger, unauf
+          geregter und gechillter sein. Weil genau das die schönste Grundlage
+          ist, um es in allen Zügen zu genießen.
         </p>
       </div>
     </section>

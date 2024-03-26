@@ -272,10 +272,10 @@ const DieLage = () => {
               className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[3.79rem]"
             >
               Lüneburg ist schön. Im Roten Feld ist es am schönsten. Ein
-              Stadtteil wie das Rote Feld ist selten. Nicht nur in Lüne-burg,
-              sondern auch in Deutschland. Im Westen lockt der Kur-park als
+              Stadtteil wie das Rote Feld ist selten. Nicht nur in Lüne burg,
+              sondern auch in Deutschland. Im Westen lockt der Kur park als
               grüne Oase und direkt daneben die Altstadt mit ihrer
-              Backsteingotik, den zahlreichen Giebelhäusern, dem Stint-markt und
+              Backsteingotik, den zahlreichen Giebelhäusern, dem Stint markt und
               dem berühmten antiken Kran, das beliebteste Fotomotiv im
               historischen Hafen.
             </p>
