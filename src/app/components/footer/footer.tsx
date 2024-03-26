@@ -62,16 +62,14 @@ const Footer = () => {
 
           <div className="text-right xxs:text-left">
             <Link
-              href={"#"}
-              target="_blank"
+              href={"/impressum"}
               className="relative hover:text-red transition-all duration-500 ease-in-out"
             >
               Impressum
             </Link>
             <span className="mx-1.5"> | </span>
             <Link
-              href={"#"}
-              target="_blank"
+              href={"/datenschutz"}
               className="relative hover:text-red transition-all duration-500 ease-in-out
             "
             >

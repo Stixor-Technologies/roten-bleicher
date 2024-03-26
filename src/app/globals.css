@@ -9,6 +9,17 @@
   /* @apply max-w-full xl:w-[85%] mx-auto sm:px-[2rem] md:px-[3rem] xl:px-[0rem]; */
 }
 
+.counter-list {
+  counter-reset: item;
+}
+.counter-list li {
+  display: block;
+}
+.counter-list li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+}
+
 .swiper-pagination {
   position: initial !important;
   padding: 0px 2.7rem;
