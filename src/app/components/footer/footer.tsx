@@ -35,10 +35,10 @@ const Footer = () => {
           <div className="flex-1 xl:flex-initial xl:w-[21.625rem]">
             <Image
               src={SchenkLogo}
-              width={404}
+              width={390}
               height={31}
               alt="schenk-logo"
-              className="sm:h-[54px] object-contain"
+              className="w-[260px] sm:h-[54px] object-contain object-left"
             />
 
             <address className="not-italic leading-[1.55] my-2.5 md:my-[1.288rem]">
