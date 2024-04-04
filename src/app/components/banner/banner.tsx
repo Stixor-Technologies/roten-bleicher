@@ -155,7 +155,7 @@ const Banner = () => {
         ref={overLappingPanel}
         className="panel h-screen bg-smoke-red relative flex items-center justify-center overflow-hidden"
       >
-        <div className="flex flex-col px-[1rem] sm:px-[2rem] md:px-0">
+        <div className="flex flex-col items-end px-[1rem] sm:px-[2rem] lg:px-0">
           <Image
             src={BannerLogo}
             width={200}
@@ -165,7 +165,7 @@ const Banner = () => {
             priority
           />
           <h2 className="text-white text-lg sm:text-3xl md:text-4xl uppercase text-right font-gibson-medium mt-8 tracking-widest sm:mt-14">
-            ZUHAUSE IM ROTEN FELD <span className="font-area">-</span> LÜNEBURG
+            Im schönsten Lüneburg, im Roten Feld
           </h2>
         </div>
       </section>
