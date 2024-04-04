@@ -85,15 +85,19 @@ const DetailSection = () => {
           <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
             Im Roten Feld findet sich viel schöne Architektur aus den Jahren von
             1870 bis 1914, die dem Viertel seinen historischen Charakter gibt.
-            Das würdigt der Rotenbleicher unter anderem mit seiner Fas- sade und
-            einem ausgewählten Gestaltungsre- pertoire aus horizontalen
-            Gesimsbändern, zu- rückgesetzten Faschen sowie geschmackvoll
+            Das würdigt der Roten Bleicher unter anderem mit seiner Fassade und
+            einem ausgewählten Gestaltungsrepertoire aus horizontalen
+            Gesims-bändern, zurückgesetzten Faschen sowie geschmackvoll
             eingesetzter Klinkerkunst.
           </p>
 
-          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
+          <h3 className="text-xl font-area-bold mb-2 text-medium-purple mt-4 lg:mt-8 lg:mb-1">
+            Architektur
+          </h3>
+
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
             Entworfen vom Hamburger Architekturbüro Schenk Fleischhaker, das es
-            versteht, gestalte- rische Qualität mit Ökologie und Nachhaltigkeit
+            versteht, gestalte-rische Qualität mit Ökologie und Nachhaltigkeit
             zu verbinden. Das extensiv begrünte Dach mit viel Platz für
             Photovoltaik und der regionale Klinker der Fassade, der seit 1888
             von einem lokalen Familienunternehmen produziert wird, sind nur zwei
@@ -120,30 +124,34 @@ const DetailSection = () => {
           </h3>
 
           <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
-            Natürlich muss eine Ausstattung schön und kom-fortabel sein. Hier
+            Natürlich muss eine Ausstattung schön und komfortabel sein. Hier
             aber will sie aber mehr. Nämlich auch intelligent und nachhaltig
             sein. Dafür entspricht der ganze Bau KfW55 und ist an das
-            Fernwärmenetz von Lüneburg angeschlos-sen, das schon heute mehr
-            regenerative Ener-gien einsetzt als üblich – und bis 2030 frei von
+            Fernwärmenetz von Lüneburg angeschlossen, das schon heute mehr
+            regenerative Energien einsetzt als üblich – und bis 2030 frei von
             CO2-Emissionen sein will.
           </p>
 
-          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
+          <h3 className="text-xl font-area-bold mb-2 text-medium-purple mt-4 lg:mt-8 lg:mb-1">
+            Ausstattung
+          </h3>
+
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
             Ähnlich nachhaltig, intelligent und sogar sparsam ist die
             Warmwasserbereitung mittels eines Wärmetauschers in der Wohnung. Das
             erspart Energieverluste im Haus und sorgt auch dafür, dass
-            Legionellen und andere gesundheitsschä-dliche Bakterien keine Chance
-            haben. Weil das Wasser in der Leitung immer die richtige Tem-peratur
+            Legionellen und andere gesundheitsschädliche Bakterien keine Chance
+            haben. Weil das Wasser in der Leitung immer die richtige Temperatur
             hat, damit sie gar nicht erst entstehen.
           </p>
 
           <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
-            Hier lebt es sich also gesund und stets komfor-tabel: Mit Aufzügen
-            in jedem Treppenhaus, Son-nenmarkisen nach Osten und Westen,
-            Eichen-holzparkett in den Wohnräumen, sorgsam aus-gewählten
-            Armaturen und Objekten und vielem mehr. Natürlich nicht von
-            irgendwelchen Her-stellern, sondern ausschließlich von bekannten und
-            bewährten Marken.
+            Hier lebt es sich also gesund und stets komfortabel: Mit Aufzügen in
+            jedem Treppenhaus, Sonnenmarkisen nach Osten und Westen,
+            Eichenholzparkett in den Wohnräumen, sorgsam ausgewählten Armaturen
+            und Objekten und vielem mehr. Natürlich nicht von irgendwelchen
+            Herstellern, sondern ausschließlich von bekannten und bewährten
+            Marken.
           </p>
         </div>
       </div>

@@ -170,8 +170,8 @@ const DieLage = () => {
         color: "#EAEAEA",
         scrollTrigger: {
           trigger: fadedTextContainer.current,
-          start: "top 80%",
-          end: "bottom 40%",
+          start: "top 70%",
+          end: "bottom 50%",
           scrub: 1,
         },
       });
@@ -267,17 +267,19 @@ const DieLage = () => {
               Die Lage
             </h3>
 
+            <h4 className="text-[clamp(2rem,5vw,5rem)] xl:leading-[6rem]">
+              Lüneburg ist schön. <br /> Im Roten Feld ist es am schönsten.
+            </h4>
+
             <p
               ref={fadedText}
-              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[3.79rem]"
+              className="text-[clamp(1rem,3.2vw,2.813rem)] text-black 2xl:leading-[3.79rem] mt-5 md:mt-[3.3vw]"
             >
-              Lüneburg ist schön. Im Roten Feld ist es am schönsten. Ein
-              Stadtteil wie das Rote Feld ist selten. Nicht nur in Lüne burg,
-              sondern auch in Deutschland. Im Westen lockt der Kur park als
-              grüne Oase und direkt daneben die Altstadt mit ihrer
-              Backsteingotik, den zahlreichen Giebelhäusern, dem Stint markt und
-              dem berühmten antiken Kran, das beliebteste Fotomotiv im
-              historischen Hafen.
+              Ein Stadtteil wie das Rote Feld ist selten. Nicht nur in Lüneburg,
+              sondern auch in Deutschland. Im Westen lockt der Kurpark als grüne
+              Oase und direkt daneben die Altstadt mit ihrer Backsteingotik, den
+              zahlreichen Giebelhäusern, dem Stintmarkt und dem berühmten
+              antiken Kran, das beliebteste Fotomotiv im historischen Hafen.
             </p>
           </div>
         </div>
@@ -297,8 +299,8 @@ const DieLage = () => {
               <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem]">
                 Begleitet von viel Natur, in Form des Kurparks und des
                 romantischen Flüsschens Ilmenau, die dem Roten Feld seinen
-                idyllischen Charme ver-leihen und viele Möglichkeiten bieten –
-                zur Erhol-ung und für abwechslungsreiche Spaziergänge. Auch an
+                idyllischen Charme verleihen und viele Möglichkeiten bieten –
+                zur Erholung und für abwechslungsreiche Spaziergänge. Auch an
                 den vielen gepflegten Altbauten vorbei, wie der
                 Wilhelm-Raabe-Schule, eine der besten Schulen der Stadt.
               </p>
@@ -306,8 +308,8 @@ const DieLage = () => {
               <p className="text-[clamp(1rem,1.2vw,1.375rem)] 2xl:leading-[1.969rem] mt-4 lg:mt-8">
                 Im Süden sorgt die Universität für viel quirliges Leben und
                 direkt daneben das Villenviertel Willschenbruch für eine
-                beruhigend-großbür-gerliche Atmosphäre. Und das Beste: Knappe
-                150 Meter vom Rotenbleicher, finden sich Supermär-kte, Ärzte und
+                beruhigend-großbürgerliche Atmosphäre. Und das Beste: Knappe 150
+                Meter vom Roten Bleicher, finden sich Supermärkte, Ärzte und
                 alle Möglichkeiten. Hier ist nicht nur die Innenstadt vor der
                 Haustür, sondern auch alles für den täglichen Bedarf.
               </p>
