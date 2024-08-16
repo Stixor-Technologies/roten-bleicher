@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 
 import { Pagination, Autoplay } from "swiper/modules";
 import useSectionInView from "@/utils/useSectionInView";
+import Gallery from "../gallery/gallery";
 
 const DasObjekt = () => {
   const sliderImages = [Slide1, Slide2, Slide3];
@@ -22,7 +23,7 @@ const DasObjekt = () => {
   return (
     <section ref={ref} id="das-objekt" className="">
       <div className="flex items-center gap-10 mb-[5.22vw]">
-        <Swiper
+        {/* <Swiper
           pagination={{
             clickable: true,
           }}
@@ -64,7 +65,9 @@ const DasObjekt = () => {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+
+        <Gallery galleryImages={sliderImages} />
       </div>
 
       <div className="container xl:max-w-full xl:px-0">
