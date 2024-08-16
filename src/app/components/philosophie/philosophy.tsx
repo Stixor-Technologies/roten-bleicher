@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import useSectionInView from "@/utils/useSectionInView";
+import ReactPlayer from "react-player";
 
 const Philosophy = () => {
   gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -36,14 +37,18 @@ const Philosophy = () => {
       id="unsere-philosophie"
       className="container pb-20 md:pb-[8.3vw]"
     >
-      <div className="flex relative">
-        <Image
-          src={PhilosophyLanding}
-          width={900}
-          height={200}
-          alt="philosophy-landing"
-          className="w-full mb-[8.5vw]"
-        />
+      <div className="  mb-[8.5vw]">
+        <div
+          className={`group relative rounded-2xl md:rounded-[2.5rem] overflow-hidden md:pt-[56.25%]`}
+        >
+          <ReactPlayer
+            url="/sample-video.mp4"
+            className=" top-0 bottom-0 left-0 right-0 !w-full !h-full md:absolute"
+            playing
+            controls
+            light={"/images/architektur/rb_architektur.jpg"}
+          />
+        </div>
       </div>
 
       <div ref={fadedTextContainer} className="max-w-[85.25rem] mx-auto">

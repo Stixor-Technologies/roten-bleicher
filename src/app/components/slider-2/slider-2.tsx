@@ -123,7 +123,7 @@ const Slider2 = () => {
   );
   return (
     <section ref={setRefs} id="slider-2" className="-mt-2">
-      <div className="flex bg-light-purple section-galleries">
+      <div className="flex section-galleries">
         {/* slider-left */}
         <div className="w-full aspect-square max-h-[76.2vh] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => {
