@@ -229,7 +229,7 @@ const DieLage = () => {
             width={153}
             height={20}
             alt=""
-            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[153px]"
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[9.5625rem]"
           />
         </div>
 
@@ -255,7 +255,7 @@ const DieLage = () => {
             width={153}
             height={20}
             alt=""
-            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[153px]"
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[9.5625rem]"
           />
         </div>
       </div>

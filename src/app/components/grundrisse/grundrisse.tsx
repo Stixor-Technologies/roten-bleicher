@@ -162,7 +162,7 @@ const FaqItem = ({
         onClick={questionClicked}
       >
         <span
-          className={`text-[1.75rem] md:[1.25rem] lg:text-[4.375rem] flex-initial max-w-[255px] lg:max-w-[34.688rem] w-full text-dark-purple inline-block group-hover:text-red transition-all ease-in-out duration-300 ${
+          className={`text-[1.75rem] md:[1.25rem] lg:text-[4.375rem] flex-initial max-w-[15.9375rem] lg:max-w-[34.688rem] w-full text-dark-purple inline-block group-hover:text-red transition-all ease-in-out duration-300 ${
             isActive && "text-red"
           }`}
         >
@@ -236,7 +236,7 @@ const FaqItem = ({
               width={170}
               height={100}
               alt=""
-              className="w-full md:max-h-[220px]"
+              className="w-full md:max-h-[13.75rem]"
             />
           </div>
 

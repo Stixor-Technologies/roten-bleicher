@@ -56,7 +56,7 @@ const DetailSection = () => {
             {marqueData?.map((marqueItem) => (
               <li
                 key={marqueItem}
-                className="marque-item flex w-[200px] sm:w-[250px] md:w-[350px] lg:w-[400px] xl:w-[536px] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
+                className="marque-item flex w-[12.5rem] sm:w-[15.625rem] md:w-[21.875rem] lg:w-[25rem] xl:w-[33.5rem] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
               >
                 <div className="border flex-1 border-light-purple px-4  py-[1rem] sm:py-[1.46rem] lg:py-[2rem] xl:py-[3.06rem] md:px-8 text-light-purple ">
                   {marqueItem}
@@ -75,7 +75,7 @@ const DetailSection = () => {
               width={733}
               height={733}
               alt=""
-              className="w-full object-cover lg:max-w-[733px] self-start"
+              className="w-full object-cover lg:max-w-[45.8125rem] self-start"
             />
           </div>
 
@@ -120,7 +120,7 @@ const DetailSection = () => {
               width={733}
               height={733}
               alt=""
-              className="w-full object-cover lg:max-w-[733px] aspect-[733/733] self-start"
+              className="w-full object-cover lg:max-w-[45.8125rem] aspect-[733/733] self-start"
             />
           </div>
 

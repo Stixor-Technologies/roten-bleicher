@@ -1,18 +1,9 @@
 import React from "react";
-import Image from "next/image";
-import PhilosophyLanding from "../../../../public/images/philosophie/philosophy-landing.png";
-import Das2 from "../../../../public/images/philosophie/das-2.avif";
-import Das3 from "../../../../public/images/philosophie/das-3.avif";
 
 import Slide1 from "../../../../public/images/das-objekt/das_slide1.jpg";
 import Slide2 from "../../../../public/images/das-objekt/das_slide2.jpg";
 import Slide3 from "../../../../public/images/das-objekt/das_slide3.jpg";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-
-import { Pagination, Autoplay } from "swiper/modules";
 import useSectionInView from "@/utils/useSectionInView";
 import Gallery from "../gallery/gallery";
 
@@ -23,50 +14,6 @@ const DasObjekt = () => {
   return (
     <section ref={ref} id="das-objekt" className="">
       <div className="flex items-center gap-10 mb-[5.22vw]">
-        {/* <Swiper
-          pagination={{
-            clickable: true,
-          }}
-          loop={true}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          modules={[Pagination, Autoplay]}
-          breakpoints={{
-            0: {
-              direction: "horizontal",
-            },
-            1024: {
-              direction: "vertical",
-            },
-          }}
-          className="mySwiper w-full h-[50vh] lg:aspect-video lg:max-h-[891px] lg:h-full !flex !items-center flex-col lg:flex-row"
-        >
-          {sliderImages?.map((imageSrc, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className={`relative mx-auto size-full overflow-hidden z-0 ${
-                  index === sliderImages.length - 1 && "bg-light-purple"
-                }`}
-              >
-                <Image
-                  className={`absolute top-0 left-0 h-full w-full rounded-none z-10 ${
-                    index === sliderImages.length - 1
-                      ? "object-contain"
-                      : "object-cover"
-                  } `}
-                  src={imageSrc}
-                  width={1536}
-                  height={900}
-                  alt=""
-                  priority
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
-
         <Gallery galleryImages={sliderImages} />
       </div>
 
@@ -81,7 +28,7 @@ const DasObjekt = () => {
           </h4>
         </div>
 
-        <p className="lg:w-[70vw] 2xl:w-[56.68vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 pt-5 pb-10 md:pt-[5.3vw] md:pb-[13.8vw] lg:mr-[140px]">
+        <p className="lg:w-[70vw] 2xl:w-[56.68vw] lg:flex gap-0 ml-auto lg:gap-7 xl:gap-4 pt-5 pb-10 md:pt-[5.3vw] md:pb-[13.8vw] lg:mr-[8.75rem]">
           <span className="mb-5 lg:mb-0 flex-1 text-[clamp(1rem,1.2vw,1.375rem)] text-black 2xl:leading-[2.159rem]">
             <span className="">
               Immobilien gibt es viele, aber eine Immobilie unmittelbarer Nähe
@@ -110,8 +57,8 @@ const DasObjekt = () => {
               Familien. Mit sonnigen Terrassen oder Balkonen für schöne Blicke
               ins Grüne oder über die ganze Stadt. Unter der Erde findet sich
               eine Tiefgarage mit 57 PKW-Stellplätzen und 160 für Fahrräder,
-              inklusive Ladestationen. Um Lüneburg und Umgebung – mal so, mal so
-              – zu erkunden.
+              inklusive Ladestationen. Um Lüneburg und Umgebung - mal so, mal so
+              - zu erkunden.
             </span>
           </span>
         </p>

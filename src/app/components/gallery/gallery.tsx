@@ -31,7 +31,7 @@ const Gallery: FC<GalleryProps> = ({ galleryImages, fromDetail }) => {
           direction: "vertical",
         },
       }}
-      className="mySwiper w-full h-[50vh] lg:aspect-video lg:max-h-[891px] lg:h-full !flex !items-center flex-col lg:flex-row"
+      className="mySwiper w-full h-[50vh] lg:aspect-video lg:max-h-[55.6875rem] lg:h-full !flex !items-center flex-col lg:flex-row"
     >
       {galleryImages?.map((imageSrc, index) => (
         <SwiperSlide key={index}>

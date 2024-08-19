@@ -175,7 +175,7 @@ const Banner = () => {
           ref={sliderContainer}
           className="h-screen bg-light-purple relative top-0 left-0 w-full flex items-center justify-center px-[1rem] sm:px-[2rem] z-20"
         >
-          <div className="w-full h-[80px] lg:[210px] flex items-center justify-center md:px-0 relative">
+          <div className="w-full h-[5rem] lg:[13.125rem] flex items-center justify-center md:px-0 relative">
             {b2Images.map((image, index) => (
               <div className={`${image.styles} h-full absolute`}>
                 <div
