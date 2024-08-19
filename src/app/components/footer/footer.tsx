@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import GraubnerLogo from "../../../../public/images/footer/graubner-logo.svg";
-import SchenkLogo from "../../../../public/images/footer/schenk-logo-1.svg";
+import SchenkLogo from "../../../../public/images/footer/schenk-logo.svg";
 import NeubauteamLogo from "../../../../public/images/footer/neubauteam.svg";
 import GrundwertLogo from "../../../../public/images/footer/grundwert.svg";
 import LinesGroup from "../../../../public/images/footer/lines-group.svg";
