@@ -40,10 +40,11 @@ const DetailSection = () => {
   );
 
   const marqueData = [
-    "71  Wohnungen",
-    "XX Stellplätze",
-    "6.960 m2 Fläche",
-    "XX m2 Garten",
+    "1-5 Zimmer (nach den 71 Wohnungen)",
+    "6960 m² Gesamtfläche",
+    "2500 m² Grünfläche",
+    "57 PKW-Stellplätze",
+    "116 Fahrrad-Stellplätze",
   ];
 
   return (
@@ -54,9 +55,18 @@ const DetailSection = () => {
         <Marquee speed={windowSize >= 768 ? 110 : 90} autoFill loop={0}>
           <ul ref={marqueRow} className="flex relative whitespace-nowrap">
             {marqueData?.map((marqueItem) => (
+              // <li
+              //   key={marqueItem}
+              //   className="marque-item flex w-[12.5rem] sm:w-[15.625rem] md:w-[21.875rem] lg:w-[25rem] xl:w-[63.5rem] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
+              // >
+              //   <div className="border flex-1 border-light-purple px-4  py-[1rem] sm:py-[1.46rem] lg:py-[2rem] xl:py-[3.06rem] md:px-8 text-light-purple ">
+              //     {marqueItem}
+              //   </div>
+              // </li>
+
               <li
                 key={marqueItem}
-                className="marque-item flex w-[12.5rem] sm:w-[15.625rem] md:w-[21.875rem] lg:w-[25rem] xl:w-[33.5rem] relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
+                className="marque-item flex  relative text-center text-base md:text-[2.61vw] px-2 md:px-[0.938rem] cursor-pointer transition duration-300 ease-in-out"
               >
                 <div className="border flex-1 border-light-purple px-4  py-[1rem] sm:py-[1.46rem] lg:py-[2rem] xl:py-[3.06rem] md:px-8 text-light-purple ">
                   {marqueItem}

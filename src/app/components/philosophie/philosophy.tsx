@@ -39,14 +39,14 @@ const Philosophy = () => {
     >
       <div className="  mb-[8.5vw]">
         <div
-          className={`group relative rounded-2xl md:rounded-[2.5rem] overflow-hidden md:pt-[56.25%]`}
+          className={`group relative rounded-2xl md:rounded-[1.5rem] overflow-hidden md:pt-[56.25%]`}
         >
           <ReactPlayer
-            url="/sample-video.mp4"
+            url="https://www.youtube.com/watch?v=FUqXdPKLYl4"
             className=" top-0 bottom-0 left-0 right-0 !w-full !h-full md:absolute"
             playing
             controls
-            light={"/images/architektur/rb_architektur.jpg"}
+            // light={"/images/architektur/rb_architektur.jpg"}
           />
         </div>
       </div>
