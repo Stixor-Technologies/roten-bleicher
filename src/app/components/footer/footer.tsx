@@ -21,7 +21,7 @@ const Footer = () => {
             </h4>
 
             <Link
-              href="anfragen@roten-bleicher.de"
+              href={`mailto:anfragen@roten-bleicher.de`}
               className="mt-[.4275rem] inline-block font-area-thin text-3xl 2xl:text-[2.8125rem] 2xl:leading-[4.0625rem]"
             >
               anfragen@roten-bleicher.de
