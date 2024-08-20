@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import PropertyStructure from "../../../../public/images/property-structure.svg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -9,12 +9,22 @@ import Link from "next/link";
 import ArrowRed from "../../../../public/images/icons/arrow-red.svg";
 import useSectionInView from "@/utils/useSectionInView";
 
+import Wohnungstyp1 from "../../../../public/images/grundrisse/wohnungstyp1.png";
+import Wohnungstyp2 from "../../../../public/images/grundrisse/wohnungstyp2.png";
+import Wohnungstyp3 from "../../../../public/images/grundrisse/wohnungstyp3.png";
+import Wohnungstyp4 from "../../../../public/images/grundrisse/wohnungstyp4.png";
+
 type FaqITemType = {
   question: string;
   answer: string;
   floor: string;
   livingSpace: string;
   rooms: string;
+  map: {
+    url: StaticImageData;
+    styles: string;
+  };
+  pdf: string;
 };
 
 const faq: FaqITemType[] = [
@@ -23,40 +33,52 @@ const faq: FaqITemType[] = [
     answer:
       "Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu elemen tum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus tincidunt felis quis arcu finibus, nec consequat metus interdum. Pellentesque quis mauris egestas, ullamcorper metus in, porttitor nulla. Donec ornare, urna non lobortis ultricies.",
     floor: "1. Obergeschoss",
-    livingSpace: "ca. 56 m2",
-    rooms: "3 Zimmer",
+    livingSpace: "58,6 m2",
+    rooms: "2 Zimmer",
+    map: {
+      url: Wohnungstyp1,
+      styles: "sm:max-w-[214px] sm:max-h-[309px]",
+    },
+    pdf: "/pdfs/grundrisse/haus1.pdf",
   },
   {
     question: "Wohnungstyp 2",
     answer:
       "Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu elemen tum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus tincidunt felis quis arcu finibus, nec consequat metus interdum. Pellentesque quis mauris egestas, ullamcorper metus in, porttitor nulla. Donec ornare, urna non lobortis ultricies.",
-    floor: "1. Obergeschoss",
-    livingSpace: "ca. 56 m2",
+    floor: "Erdgeschoss",
+    livingSpace: "84,2 m2",
     rooms: "3 Zimmer",
+    map: {
+      url: Wohnungstyp2,
+      styles: "sm:max-w-[469px] sm:max-h-[286px]",
+    },
+    pdf: "/pdfs/grundrisse/haus2.pdf",
   },
   {
     question: "Wohnungstyp 3",
     answer:
       "Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu elemen tum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus tincidunt felis quis arcu finibus, nec consequat metus interdum. Pellentesque quis mauris egestas, ullamcorper metus in, porttitor nulla. Donec ornare, urna non lobortis ultricies.",
-    floor: "1. Obergeschoss",
-    livingSpace: "ca. 56 m2",
+    floor: "4. Obergeschoss",
+    livingSpace: "115,3 m2",
     rooms: "3 Zimmer",
+    map: {
+      url: Wohnungstyp3,
+      styles: "sm:max-w-[298px] sm:max-h-[342px]",
+    },
+    pdf: "/pdfs/grundrisse/haus3.pdf",
   },
   {
     question: "Wohnungstyp 4",
     answer:
       "Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu elemen tum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus tincidunt felis quis arcu finibus, nec consequat metus interdum. Pellentesque quis mauris egestas, ullamcorper metus in, porttitor nulla. Donec ornare, urna non lobortis ultricies.",
-    floor: "1. Obergeschoss",
-    livingSpace: "ca. 56 m2",
-    rooms: "3 Zimmer",
-  },
-  {
-    question: "Wohnungstyp 5",
-    answer:
-      "Mauris molestie sed ex ut sagittis. Aliquam nulla mauris, mattis eu elemen tum vitae, cursus et ipsum. Morbi a aliquet lacus. Vivamus tincidunt felis quis arcu finibus, nec consequat metus interdum. Pellentesque quis mauris egestas, ullamcorper metus in, porttitor nulla. Donec ornare, urna non lobortis ultricies.",
-    floor: "1. Obergeschoss",
-    livingSpace: "ca. 56 m2",
-    rooms: "3 Zimmer",
+    floor: "3. Obergeschoss",
+    livingSpace: "170,3 m2",
+    rooms: "4 Zimmer",
+    map: {
+      url: Wohnungstyp4,
+      styles: "sm:max-w-[481px] sm:max-h-[257px]",
+    },
+    pdf: "/pdfs/grundrisse/haus4.pdf",
   },
 ];
 
@@ -201,7 +223,8 @@ const FaqItem = ({
             {faqItem.answer}
           </span>
           <Link
-            href="#"
+            href={faqItem?.pdf}
+            target="_blank"
             className="hidden sm:inline-flex group mt-7.5 items-center gap-4 self-center mt-6 md:mt-[2.875rem]"
           >
             <Image src={ArrowRed} width={41} height={36} alt="" />
@@ -213,7 +236,7 @@ const FaqItem = ({
         </div>
 
         <div className="flex-1 flex flex-col gap-4 sm:gap-9 2xl:gap-[8.25rem] sm:flex-row">
-          <div className="flex-1 lg:flex-initial flex flex-col justify-between gap-2 sm:gap-4 xl:gap-0 font-area-bold">
+          <div className=" self-start flex-1 lg:flex-initial flex flex-col justify-between gap-2 sm:gap-4 xl:gap-[1.625rem] font-area-bold">
             <div className="flex flex-col md:text-[1.438rem]">
               <span className="text-white">Etage</span>
               <span className="text-red">{faqItem.floor}</span>
@@ -230,18 +253,20 @@ const FaqItem = ({
             </div>
           </div>
 
-          <div className="flex-1 sm:self-end">
+          <div className="flex-1 flex sm:self-end">
             <Image
-              src={PropertyStructure}
-              width={170}
-              height={100}
+              src={faqItem?.map?.url}
+              // width={214}
+              // height={309}
               alt=""
-              className="w-full md:max-h-[13.75rem]"
+              className={`sm:ml-auto ${faqItem?.map?.styles}`}
+              // className="w-full md:max-h-[13.75rem]"
             />
           </div>
 
           <Link
-            href="#"
+            href={faqItem?.pdf}
+            target="_blank"
             className="inline-flex sm:hidden group mt-7.5 items-center gap-4 self-start mt-6 md:mt-[2.875rem]"
           >
             <Image src={ArrowRed} width={41} height={36} alt="" />
