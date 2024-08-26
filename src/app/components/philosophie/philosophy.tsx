@@ -58,7 +58,7 @@ const Philosophy = () => {
                 />
               </button>
             }
-            // light={"/images/architektur/rb_architektur.jpg"}
+            light={"/images/video-thumbnail.jpg"}
           />
         </div>
       </div>
