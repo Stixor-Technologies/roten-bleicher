@@ -43,7 +43,7 @@ const Philosophy = () => {
           className={`group relative rounded-2xl md:rounded-[1.5rem] overflow-hidden pt-[56.25%]`}
         >
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=FUqXdPKLYl4"
+            url="https://vimeo.com/1000700234/7e82f07e22?share=copy"
             className=" top-0 bottom-0 left-0 right-0 !w-full !h-full absolute"
             playing
             controls
@@ -58,7 +58,7 @@ const Philosophy = () => {
                 />
               </button>
             }
-            light={"/images/architektur/rb_architektur.jpg"}
+            // light={"/images/architektur/rb_architektur.jpg"}
           />
         </div>
       </div>
