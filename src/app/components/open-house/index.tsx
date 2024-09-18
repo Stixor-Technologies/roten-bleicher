@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import CustomModal from "../modal";
 import Image from "next/image";
@@ -5,11 +6,17 @@ import Close from "../../../../public/images/icons/cross-white.svg";
 
 const OpenHouse = () => {
   const [showModal, setShowModal] = useState(false);
-  const [feedbucketData, setFeedbucketData] = useState(
-    JSON.parse(localStorage.getItem("feedbucket-data") || "{}"),
-  );
+  const [feedbucketData, setFeedbucketData] = useState<{
+    onboarded?: boolean;
+  } | null>(null);
 
   useEffect(() => {
+    const feedbucketDataString =
+      localStorage.getItem("feedbucket-data") ?? "{}";
+    const data = JSON.parse(feedbucketDataString);
+
+    setFeedbucketData(data);
+
     const hasSeenModal = localStorage.getItem("hasSeenModal");
     if (!hasSeenModal) {
       setShowModal(true);

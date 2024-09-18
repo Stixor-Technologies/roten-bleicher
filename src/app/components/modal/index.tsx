@@ -1,3 +1,4 @@
+"use client";
 import React, { Dispatch, useEffect } from "react";
 import { createPortal } from "react-dom";
 import ClickAwayListener from "react-click-away-listener";
