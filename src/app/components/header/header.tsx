@@ -73,7 +73,7 @@ const Header = () => {
               width={201}
               height={56}
               alt="roten-bleicher"
-              className="w-32 lg:w-auto max-w-[201px]"
+              className="w-32 lg:w-auto max-w-[12.5625rem]"
               onClick={() => {
                 scrollToSection("#banner");
               }}

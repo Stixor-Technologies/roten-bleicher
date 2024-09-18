@@ -9,6 +9,7 @@ import DetailSection from "./components/detail/detail";
 import DieLage from "./components/die-lage/die-lage";
 import FAQ from "./components/grundrisse/grundrisse";
 import Kontakt from "./components/kontakt/kontakt";
+import Slider2 from "./components/slider-2/slider-2";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -27,6 +28,7 @@ export default function Home() {
       <DetailSection />
       <FAQ />
       <DieLage />
+      <Slider2 />
       <Kontakt />
     </main>
   );

@@ -176,7 +176,7 @@ const Contact = () => {
                               <div key={fieldName}>
                                 <Field
                                   name={fieldName}
-                                  className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[50px] md:h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent focus:outline-none text-base placeholder:text-base md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
+                                  className={`text-dark-purple placeholder-light-purple placeholder:font-area-thin h-[3.125rem] md:h-[4.688rem] w-full border border-light-purple px-4 py-4 bg-transparent focus:outline-none text-base placeholder:text-base md:placeholder:text-[1.875rem] md:text-[1.875rem]`}
                                   placeholder={placeholders[typedFieldName]}
                                 />
 
@@ -271,7 +271,7 @@ const Contact = () => {
                               width={60}
                               height={52}
                               alt=""
-                              className="-rotate-90 w-[1.6rem] 2xl:w-[53.4px]"
+                              className="-rotate-90 w-[1.6rem] 2xl:w-[3.3375rem]"
                             />
                             <span className="font-area-semibold text-2xl md:text-[2.5rem] tranition-all duration-300 text-light-purple group-hover:pl-2 ">
                               Senden

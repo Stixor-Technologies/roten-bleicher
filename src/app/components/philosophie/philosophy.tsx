@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import useSectionInView from "@/utils/useSectionInView";
+import ReactPlayer from "react-player";
+import PlayIcon from "../../../../public/images/play-icon.svg";
 
 const Philosophy = () => {
   gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -36,14 +38,29 @@ const Philosophy = () => {
       id="unsere-philosophie"
       className="container pb-20 md:pb-[8.3vw]"
     >
-      <div className="flex relative">
-        <Image
-          src={PhilosophyLanding}
-          width={900}
-          height={200}
-          alt="philosophy-landing"
-          className="w-full mb-[8.5vw]"
-        />
+      <div className="  mb-[8.5vw]">
+        <div
+          className={`group relative rounded-2xl md:rounded-[1.5rem] overflow-hidden pt-[56.25%]`}
+        >
+          <ReactPlayer
+            url="https://vimeo.com/1000700234/7e82f07e22?share=copy"
+            className=" top-0 bottom-0 left-0 right-0 !w-full !h-full absolute"
+            playing
+            controls
+            playIcon={
+              <button className=" size-16 sm:size-24 bg- flex items-center justify-center border-2 sm:border-4 backdrop-blur-lg border-white rounded-full">
+                <Image
+                  src={PlayIcon}
+                  width={52}
+                  height={52}
+                  alt="play-video"
+                  priority
+                />
+              </button>
+            }
+            light={"/images/video-thumbnail.jpg"}
+          />
+        </div>
       </div>
 
       <div ref={fadedTextContainer} className="max-w-[85.25rem] mx-auto">

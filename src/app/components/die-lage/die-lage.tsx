@@ -206,7 +206,7 @@ const DieLage = () => {
       {/* sliders */}
       <div className="flex bg-light-purple section-galleries mb-[9.8vw]">
         {/* slider-left */}
-        <div className="w-full aspect-square max-h-[77.34vh] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[76.2vh] md:px-0 relative section-gallery">
           {sliderLeftData?.map((image, index) => {
             return (
               <div
@@ -229,12 +229,12 @@ const DieLage = () => {
             width={153}
             height={20}
             alt=""
-            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[153px]"
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[9.5625rem]"
           />
         </div>
 
         {/* slider-right */}
-        <div className="w-full aspect-square max-h-[77.34vh] md:px-0 relative section-gallery">
+        <div className="w-full aspect-square max-h-[76.2vh] md:px-0 relative section-gallery">
           {sliderRightData?.map((image, index) => (
             <div
               key={index}
@@ -255,7 +255,7 @@ const DieLage = () => {
             width={153}
             height={20}
             alt=""
-            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[153px]"
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-12 md:w-auto md:max-w-[9.5625rem]"
           />
         </div>
       </div>
@@ -284,7 +284,7 @@ const DieLage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row max-w-[93.875rem] ml-auto w-full gap-16 2xl:gap-[8.03vw] mb-[17.92vw]">
+        <div className="flex flex-col xl:flex-row max-w-[93.875rem] ml-auto w-full gap-16 2xl:gap-[8.03vw] mb-[11.62vw]">
           <Image
             src={Map}
             width={812}
