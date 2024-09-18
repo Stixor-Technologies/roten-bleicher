@@ -38,10 +38,10 @@ const OpenHouse = () => {
     <CustomModal
       isVisible={showModal}
       setIsVisible={handleCloseModal}
-      styles="max-w-[28.75rem]"
+      styles="max-w-[550px]"
     >
       <div className="bg-light-purple p-3">
-        <div className="flex flex-col items-center text-center justify-center border-2 border-white p-4 py-9 gap-4 text-red ">
+        <div className="flex flex-col items-center text-center justify-center border-2 border-white p-4 py-20 gap-6 text-red ">
           <h2 className="text-5xl font-area-extrabold uppercase mt-4">
             Open House
           </h2>
