@@ -9,6 +9,7 @@ import DetailSection from "./components/detail/detail";
 import DieLage from "./components/die-lage/die-lage";
 import FAQ from "./components/grundrisse/grundrisse";
 import Kontakt from "./components/kontakt/kontakt";
+import OpenHouse from "./components/open-house";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -28,6 +29,7 @@ export default function Home() {
       <FAQ />
       <DieLage />
       <Kontakt />
+      <OpenHouse />
     </main>
   );
 }
