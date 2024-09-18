@@ -19,7 +19,6 @@ const Header = () => {
   const activeSection = useMenuStore((state) => state.activeSection);
   useGSAP(
     () => {
-      console.log(document.body.clientHeight);
       ScrollTrigger.create({
         trigger: headerRef.current,
         start: `bottom ${headerRef?.current?.offsetHeight}px`,
